@@ -1,0 +1,121 @@
+/*productos.html*/
+.products__title{
+    @include principal-title();
+    @include margin-titles();
+}
+/*CAROUSEL IMAGENES -HOME*/
+.products__carousel{
+    margin: 1rem 0rem 2rem 0rem;
+    justify-content: center;
+}
+.products__carousel__img{
+    margin: 0rem auto;
+    filter: grayscale(30%);
+}
+@media screen and (max-width: 992px){
+    .products__carousel__img{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 576px){
+    .products__carousel__img{
+        width: 100%;
+    }
+}
+/*SECCION DE PRODUCTOS*/
+.products__box{
+    padding: 0rem;
+    .products__box__title{
+        @include block-titles();
+        text-shadow: 2px 2px 4px black;
+        .resaltar{
+            @include highlight();
+        }
+    }
+}
+.products__section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    .products__section__block{
+        flex-basis: 30%;
+        background-color: $bg-lightwhite;
+        padding: 0 10px 5px 10px;
+        margin-bottom: 2.5rem;
+        transition: all 0.3s;
+        .img-modal-button{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            transition: all 0.5s;
+        }
+        .img-modal-button:hover{
+            transform: scale(1.1, 1.1);
+        }
+        h3{
+            padding: 1.5rem 0rem 0.5rem 0rem;
+            margin: 0rem;
+            color: $lightgrey;
+            @include format-text ($font-family-primary, 14pt);
+            letter-spacing: map-get($map: $letter-spacings, $key: medium);
+            text-align: center;
+        }
+    }
+    .products__section__block:hover{
+        @include box-shadow-white ();
+    }
+}
+
+@media screen and (max-width: 992px){
+    .products__section{
+        .products__section__block{
+            flex-basis: 30%;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .products__section{
+        .products__section__block{
+            flex-basis: 47%;
+        }
+    }
+}
+@media screen and (max-width: 576px){
+    .products__section{
+        .products__section__block{
+            flex-basis: 90%;
+        }
+    }
+}
+
+/*MODAL*/
+.modal-content{
+    background-color: rgba($dark10, 0.9);
+}
+.modal-title{
+    color: white;
+    font-family: $font-family-primary;
+    letter-spacing: map-get($map: $letter-spacings, $key: small);
+}
+.close{
+    color: $yellow;
+    opacity: 1;
+    text-shadow: none;
+}
+.close:hover{
+    color: $yellow;
+}
+.img-modal-body{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+@media screen and (min-width: 992px){
+    .modal-content{
+        width: 130%;
+        height: 130%;
+    }
+}

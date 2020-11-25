@@ -1,0 +1,176 @@
+/*VARIABLES, MIXINS, MAPS*/
+/*COLORS*/
+$dark10: rgb(10, 10, 10);
+$dark20: rgb(20, 20, 20);
+$dark20transparent90: rgba(20, 20, 20, 0.9);
+$lightgrey: rgb(236, 240, 241);
+$mediumgrey: rgb(206, 206, 206);
+$yellow: rgb(248, 232, 5);
+$yellowlight: rgb(255, 246, 121);
+
+/*background-color*/
+$bg-lightwhite: rgba(white, 0.15);
+
+/*font-family*/
+$font-family-primary: 'Oswald', sans-serif;
+$font-family-secondary: 'Open sans', sans-serif;
+$font-family-body: 'Lato', sans-serif;
+
+/*maps*/
+$font-sizes: ('x-small': 0.8rem , 'small': 0.9rem , 'medium': 1rem, 'large': 1.2rem, 'x-large': 1.5rem, 'xx-large': 2rem, 'xxx-large': 2.5rem);
+$letter-spacings: ('x-small': 0.1rem, 'small': 0.2rem, 'medium': 0.3rem, 'large': 0.5rem);
+
+/*mixins*/
+@mixin body-text (){
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+@mixin format-text ($font-family, $font-size) {
+    font-family: $font-family;
+    font-size: $font-size;
+}
+@mixin box-shadow-white () {
+    box-shadow: 0px 0px 10px white;
+}
+@mixin text-shadow-grey () {
+    text-shadow: 2px 2px 4px $mediumgrey;
+}
+@mixin margin-titles(){
+    margin: 1rem 0rem 1.5rem 0rem;
+}
+
+@mixin social-network{
+    padding: 0rem;
+    a.icoFacebook:hover {
+        background-color:#3B5998;
+    }
+    a.icoInstagram:hover {
+        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+        background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    }
+    a.icoMail:hover {
+        background-color:#BD3518;
+    }
+} 
+@mixin social-circle{
+    li{
+        list-style: none;
+        display: inline;
+        margin: 0rem 1.5rem;
+        a {
+            display:inline-block;
+            position:relative;
+            margin:0 auto 0 auto;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            border-radius:50%;
+            text-align:center;
+            width: 50px;
+            height: 50px;
+            font-size:20px;
+            background-color: rgba($mediumgrey, 0.5);
+        }
+        i {
+            margin:0;
+            font-size: 1.7rem;
+            line-height:50px;
+            text-align: center;
+            color: #fff;
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            transition: all 0.8s;
+        }
+        .icon-instagram{
+            font-size: 2rem;
+        }
+        a:hover{
+            i{
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -ms--transform: rotate(360deg);
+                transform: rotate(360deg);
+                -webkit-transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                -o-transition: all 0.2s;
+                -ms-transition: all 0.2s;
+                transition: all 0.2s;
+            }
+        }
+    }
+    @media screen and (max-width: 576px){
+        li{
+            margin: 0rem 1rem;
+            i {
+                font-size: 1.5rem;
+            }
+            .icon-instagram{
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+@mixin principal-title(){
+    background-image: linear-gradient(to right, rgb(236, 240, 241), rgba(0,0,0, 0.5));
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: map-get($map: $letter-spacings, $key: medium);
+    @include format-text ($font-family-primary, map-get($map: $font-sizes, $key: xxx-large));
+    text-align: center;
+    padding: 10px;
+    @media screen and (max-width: 992px){
+        font-size: map-get($map: $font-sizes, $key: xx-large);
+    }
+    @media screen and (max-width: 576px){
+        font-size: 1.75rem;
+    }
+}
+/*titulos de sectiones de la web*/
+@mixin block-titles(){
+    justify-content: center;
+    background-color: $bg-lightwhite;
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
+    @include format-text($font-family-primary, map-get($map: $font-sizes, $key: xx-large));
+    @include text-shadow-grey ();
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: map-get($map: $letter-spacings, $key: large);
+    @media screen and (max-width: 992px){
+        padding: 0.75rem 0rem;
+        margin: 0.75rem 0rem;
+        font-size: map-get($map: $font-sizes, $key: x-large);
+        letter-spacing: map-get($map: $letter-spacings, $key: medium);
+    }
+    @media screen and (max-width: 576px){
+        padding: 0.5rem 0rem;
+        margin: 0.5rem 0rem;
+        font-size: 1.4rem;
+        letter-spacing: map-get($map: $letter-spacings, $key: small);
+    }
+}
+@mixin block-subtitles () {
+    @include format-text($font-family-primary, map-get($map: $font-sizes, $key: x-large));
+    @include text-shadow-grey();
+    font-weight: 400;
+    letter-spacing: map-get($map: $letter-spacings, $key: medium);
+    margin: 0.5rem 0rem 0rem 0rem;
+    @media screen and (max-width: 992px){
+        @include format-text($font-family-primary, map-get($map: $font-sizes, $key: large));
+        letter-spacing: map-get($map: $letter-spacings, $key: small);
+    }
+    @media screen and (max-width: 576px){
+        @include format-text($font-family-primary, map-get($map: $font-sizes, $key: medium));
+        letter-spacing: map-get($map: $letter-spacings, $key: x-small);
+    }
+}
+@mixin highlight(){
+    color: $yellow;
+}
