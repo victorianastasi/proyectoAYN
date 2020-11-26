@@ -381,12 +381,16 @@
 
 /*CAROUSEL IMAGENES -HOME*/
 .products__carousel {
-  margin: 1rem 0rem 2rem 0rem;
+  margin: 1rem 0rem 3rem 0rem;
   justify-content: center; }
 
 .products__carousel__img {
   margin: 0rem auto;
-  filter: grayscale(30%); }
+  filter: grayscale(30%);
+  width: 70%; }
+
+.carousel-indicators .active {
+  background-color: #f8e805; }
 
 @media screen and (max-width: 992px) {
   .products__carousel__img {
