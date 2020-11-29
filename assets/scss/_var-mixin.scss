@@ -7,6 +7,10 @@ $lightgrey: rgb(236, 240, 241);
 $mediumgrey: rgb(206, 206, 206);
 $yellow: rgb(248, 232, 5);
 $yellowlight: rgb(255, 246, 121);
+$dark41: rgb(41, 41, 41);
+$grey-dark: rgb(25, 25, 25);
+$grey-light: rgb(117, 116, 116);
+$dark-blue: rgb(34, 34, 59);
 
 /*background-color*/
 $bg-lightwhite: rgba(white, 0.15);
@@ -19,6 +23,18 @@ $font-family-body: 'Lato', sans-serif;
 /*maps*/
 $font-sizes: ('x-small': 0.8rem , 'small': 0.9rem , 'medium': 1rem, 'large': 1.2rem, 'x-large': 1.5rem, 'xx-large': 2rem, 'xxx-large': 2.5rem);
 $letter-spacings: ('x-small': 0.1rem, 'small': 0.2rem, 'medium': 0.3rem, 'large': 0.5rem);
+
+/*ANIMACIONES*/
+@keyframes ref-active {
+    0%{
+        background-color: $lightgrey;
+        width: inherit;
+    }
+    100%{
+        background-color: white;
+        width: 100%;
+    }
+}
 
 /*mixins*/
 @mixin body-text (){
@@ -105,11 +121,16 @@ $letter-spacings: ('x-small': 0.1rem, 'small': 0.2rem, 'medium': 0.3rem, 'large'
     @media screen and (max-width: 576px){
         li{
             margin: 0rem 1rem;
+            a{
+                width: 45px;
+                height: 45px;
+            }
             i {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+                line-height: 45px;
             }
             .icon-instagram{
-                font-size: 1.7rem;
+                font-size: 1.55rem;
             }
         }
     }
@@ -137,7 +158,7 @@ $letter-spacings: ('x-small': 0.1rem, 'small': 0.2rem, 'medium': 0.3rem, 'large'
     padding: 1rem 0rem;
     margin: 1rem 0rem;
     @include format-text($font-family-primary, map-get($map: $font-sizes, $key: xx-large));
-    @include text-shadow-grey ();
+    text-shadow: 4px 4px 4px $dark20;
     text-align: center;
     color: white;
     font-weight: 600;
@@ -173,4 +194,61 @@ $letter-spacings: ('x-small': 0.1rem, 'small': 0.2rem, 'medium': 0.3rem, 'large'
 }
 @mixin highlight(){
     color: $yellow;
+}
+@keyframes underline-gradient { 
+    0%{
+        transform: translate3d(0%, 0%, 0);
+    }
+    100%{
+        transform: translate3d(-75%, 0%, 0);
+    }
+}
+@mixin block-home-title (){
+    justify-content: center;
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
+    @include format-text($font-family-primary, map-get($map: $font-sizes, $key: xx-large));
+    text-shadow: 0 0 5px black;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: map-get($map: $letter-spacings, $key: large);
+    &:after {
+        background: linear-gradient(
+        to bottom,
+        rgba(20,20,20, 0.8),
+        rgba(20,20,20, 0.8)
+        ) center / 100% no-repeat;
+        animation: underline-gradient 10s linear infinite;
+        background-image: linear-gradient(
+        90deg, 
+        rgba($lightgrey, 0.6) 35%, 
+        rgba($dark10, 0.6) 55%,  
+        rgba($lightgrey, 0.6) 75%,
+        );
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 400%;
+        will-change: transform;
+        z-index: -1;
+    }
+    @media screen and (max-width: 992px){
+        padding: 0.75rem 0rem;
+        margin: 0.75rem 0rem;
+        font-size: map-get($map: $font-sizes, $key: x-large);
+        letter-spacing: map-get($map: $letter-spacings, $key: medium);
+    }
+    @media screen and (max-width: 576px){
+        padding: 0.5rem 0rem;
+        margin: 0.5rem 0rem;
+        font-size: 1.4rem;
+        letter-spacing: map-get($map: $letter-spacings, $key: small);
+    }
 }

@@ -31,74 +31,86 @@ a:visited, a:link{
     animation-name: fadeInLeft;
     animation-duration: 1s;
 }
-/*Navbar UNO*/
-.navtop{
-    background-color: rgba($mediumgrey, 0.5);
-    padding: 0.75rem 0rem;
-    justify-content: center;
+/*Navbar INFO (TELEFONO, MAIL, Y CONTACTO)*/
+.navinfo{
+    background-color: rgba($dark10, 0.9);
+    padding: 0.5rem 0rem;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0rem;
-    .navtop__items{
+    border-bottom: 1px solid $yellow;
+    .navinfo__items{
         display: flex;
         justify-content: center;
         align-content: center;
-        .navtop__items__icon{
-            width: 1.3rem;
-            color: $dark20transparent90;
-            word-spacing: 10px;
-            vertical-align: middle;
-            margin-right: 0.5rem;
-        }
-        .navtop__items__text{
-            color: $dark20transparent90;
-            font-size: 0.85rem;
-            font-weight: 600;
+        padding: 0rem 0.75rem;
+        .navinfo__items__text{
+            font-family: 'Ubuntu';
+            color: $lightgrey;
+            font-size: 0.9rem;
+            font-weight: 500;
             word-spacing: 10px;
             margin: 0rem;
+            padding: 0.25rem 0;
         }
     }
-    .navtop__items--msj{
-        background-color: rgba($mediumgrey, 0.7);
-        padding: 0.25rem 0;
+    .navinfo__items:hover{
+        background-color: $lightgrey;
+        box-shadow: 0px 0px 10px white;
         border-radius: 5px;
-        .navtop__items__icon--msj{
-            margin-left: 1rem;
-            font-size: 1.3rem;
+        .navinfo__items__text{
+            color: $dark10;
         }
-    }
-    .navtop__items--msj:hover{
-        background-color: rgba(white, 0.8);
     }
 }
 @media screen and (max-width: 992px){
-    .navtop{
+    .navinfo{
+        z-index: -1;
+        .navinfo__items{
+            .navinfo__items__text{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .navinfo{
         padding: 0rem;
     }
 }
 @media screen and (max-width: 576px){
-    .navtop{
-        .navtop__items{
-            .navtop__items__icon{
-                width: 1rem;
+    .navinfo{
+        .navinfo__items{
+            .navinfo__items__text{
+                font-size: 0.7rem;
+                padding: 0rem 0;
             }
-            .navtop__items__text{
-                font-size: 0.75rem;
-            }
-            .navtop__items__icon--msj{
-                font-size: 1.1rem;
+        }
+        .navinfo__items:hover{
+            border-radius: 2px;
+        }
+        .navinfo__items:active{
+            background-color: $lightgrey;
+            border-radius: 2px;
+            animation-name: ref-active;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            .navinfo__items__text{
+                color: $dark10;
             }
         }
     }
 }
 
+
 /*Navbar dos*/
-.navbottom{
+.navmenu{
     background-color: rgba($dark10, 0.6);
     border-bottom: 1px solid $yellow;
-    height: 125px;
+    height: 130px;
     padding: 1rem 0rem;
     margin: 0rem;
-    .navbottom__bar{
+    .navmenu__bar{
         color: $lightgrey;
         .navbar-brand{
             img{
@@ -107,7 +119,7 @@ a:visited, a:link{
             }
         }
         .navbar-toggler{
-            .navbottom__bar__icon{
+            .navmenu__bar__icon{
                 font-size: map-get($map: $font-sizes, $key: xx-large);
                 color: rgba($lightgrey, 0.85);
                 margin: 2rem 0rem;
@@ -116,23 +128,24 @@ a:visited, a:link{
         .navbar-collapse {
             justify-content: flex-end;
             .navbar-nav{
-                .navbottom__bar__link{
-                    @include format-text ($font-family-secondary, map-get($map: $font-sizes, $key: large));
-                    font-variant: small-caps;
-                    font-weight: 600;
+                .navmenu__bar__link{
+                    @include format-text ('Ubuntu', 1.15rem);
+                    color: white;
+                    font-weight: 500;
                     margin: 0.25rem;
+                    text-transform: uppercase;
                     i{
                         color: $yellow;
                     }
                 }
-                .navbottom__bar__link:hover{
+                .navmenu__bar__link:hover{
                     background-color: $dark10;
                     border-radius: 5px;
                 }
                 .nav-link.active{
                     color: #fff;
-                    font-weight: 800;
-                    font-size: map-get($map: $font-sizes, $key: large);
+                    font-weight: 500;
+                    @include format-text ('Ubuntu', 1.2rem);
                 }
                 .nav-link.active:hover{
                     background-color: $dark10;
@@ -144,10 +157,10 @@ a:visited, a:link{
 }
 
 @media screen and (max-width: 992px){
-    .navbottom{
+    .navmenu{
         height: 110px;
         padding: 1rem 0rem;
-        .navbottom__bar{
+        .navmenu__bar{
             .navbar-brand{
                 img{
                     width: 180px;
@@ -156,14 +169,14 @@ a:visited, a:link{
             }
             .navbar-collapse {
                 .navbar-nav{
-                    .navbottom__bar__link{
+                    .navmenu__bar__link{
                         font-size: map-get($map: $font-sizes, $key: medium);
                         border-radius: 0px;
-                        background-color: rgba($dark10, 0.7);
+                        background-color: rgba($dark10, 0.8);
                         margin: 0rem;
                         padding-left: 1rem;
                     }
-                    .navbottom__bar__link:hover{
+                    .navmenu__bar__link:hover{
                         background-color: $dark10;
                         border-radius: 0px;
                     }
@@ -172,16 +185,19 @@ a:visited, a:link{
                         border-radius: 0px;
                         margin: 0rem;
                     }
+                    .nav-link.active:hover{
+                        border-radius: 0px;
+                    }
                 }
             }
         }
     }
 }
 @media screen and (max-width: 576px){
-    .navbottom{
+    .navmenu{
         height: 90px;
         padding: 0.75rem 0rem;
-        .navbottom__bar{
+        .navmenu__bar{
             .navbar-brand{
                 img{
                     width: 150px;
@@ -207,12 +223,12 @@ a:visited, a:link{
         left: 10%;
     }
     .home-video-title{
-        @include format-text('Josefin Sans', 4rem);
+        @include format-text('Ubuntu', 4rem);
         font-weight: 600;
         color: white;
         margin: 0rem;
         padding: 0rem;
-        text-shadow: 5px 5px 10px white;
+        text-shadow: 5px 5px 5px $grey-dark;
     }
 }
 
@@ -222,7 +238,7 @@ a:visited, a:link{
             margin: -3rem auto 0rem auto;
         }
         .home-video-title{
-            @include format-text('Josefin Sans', 3rem);
+            @include format-text('Ubuntu', 3rem);
         }
     }
 }
@@ -232,7 +248,7 @@ a:visited, a:link{
             margin: -2rem auto 0rem auto;
         }
         .home-video-title{
-            @include format-text('Josefin Sans', 2.5rem);
+            @include format-text('Ubuntu', 2.5rem);
         }
     }
 }
@@ -240,10 +256,16 @@ a:visited, a:link{
     .video{  
         .home-video{
             margin: 0rem auto 0rem auto;
+            height: 50vh;
+            width: max-content;
         }     
-        
+        .home-video-box{
+            position: absolute;
+            top: 35%;
+            left: 10%;
+        }
         .home-video-title{
-            @include format-text('Josefin Sans', 1.75rem);
+            @include format-text('Ubuntu', 1.75rem);
         }
     }
 }
@@ -285,14 +307,14 @@ a:visited, a:link{
             .homeblockus__card__body__title{
                 text-transform: uppercase;
                 margin: 0px;
+                font-family: 'Poppins', sans-serif;
                 font-weight: 800;
                 font-size: 1.2rem;
                 letter-spacing: map-get($map: $letter-spacings, $key: small)
             }
             .homeblockus__card__body__text{
-                @include format-text($font-family-primary, map-get($map: $font-sizes, $key: large));
+                font-size: 1rem;
                 color: white;
-                letter-spacing: map-get($map: $letter-spacings, $key: x-small)
             }
         }
     }
@@ -313,7 +335,7 @@ a:visited, a:link{
                     font-size: map-get($map: $font-sizes, $key: medium);
                 }
                 .homeblockus__card__body__text{
-                    font-size: map-get($map: $font-sizes, $key: medium);
+                    font-size: 0.9rem;
                 }
             }
         }
@@ -335,7 +357,7 @@ a:visited, a:link{
                     font-size: map-get($map: $font-sizes, $key: small);
                 }
                 .homeblockus__card__body__text{
-                    font-size: map-get($map: $font-sizes, $key: small);
+                    font-size: 0.85rem;
                 }
             }
         }
@@ -363,7 +385,7 @@ a:visited, a:link{
         }
     }
     .boton:hover{
-        @include box-shadow-white ();
+        @include box-shadow-white;
         background-color: white;
         animation-name: pulse;
         animation-duration: 1s;
@@ -374,17 +396,33 @@ a:visited, a:link{
     .homeblock__boton{
         justify-content: center;
         margin: 0rem;
-        position: unset;;
+        position: unset;
+        .boton{
+            border-radius: 15px;
+            min-width: 130px;
+            height: 40px;
+            padding: 0rem 15px;
+            justify-content: space-evenly;
+            .boton__text, .boton__icon{
+                color: $dark10;
+                font-size: 0.9rem;
+            }
+        }
+        .boton:active{
+            @include box-shadow-white ();
+            background-color: white;
+            animation-name: pulse;
+            animation-duration: 1s;
+        }
     }
 }
 /*BLOQUE PRODUCTOS*/
 .homeblockproducts__top{
     padding: 0rem;
     .homeblockproducts__title{
-        @include block-titles();
+        @include block-titles ();
     }
 }
-
 .homeblockproducts{
     justify-content: space-between;
     align-items: center;
@@ -396,10 +434,10 @@ a:visited, a:link{
     }
     .homeblockproducts__box{
         .homeblockproducts__box__text{
-            @include format-text($font-family-primary, 1.1rem);
+            font-size: 1rem;
             padding: 1rem 1.5rem;
             color: white;
-            letter-spacing: map-get($map: $letter-spacings, $key: small)
+            letter-spacing: map-get($map: $letter-spacings, $key: x-small);
         }
     }
 }
@@ -408,7 +446,7 @@ a:visited, a:link{
         padding: 1rem 0rem 2rem 0rem;
         .homeblockproducts__box{
             .homeblockproducts__box__text{
-                font-size: map-get($map: $font-sizes, $key: small);
+                font-size: 0.9rem;
                 padding: 0.5rem 0rem;
                 margin: 0px;
             }
@@ -423,8 +461,10 @@ a:visited, a:link{
             padding: 0rem;
         }
         .homeblockproducts__box{
+            margin-top: 1rem;
             .homeblockproducts__box__text{
-                letter-spacing: map-get($map: $letter-spacings, $key: x-small)
+                letter-spacing: 0px;
+                font-size: 0.85rem;
             }
         }
     }
@@ -467,12 +507,16 @@ a:visited, a:link{
 @media screen and (max-width: 576px){
     .homeblockcontact__boton{
         padding: 1rem 0rem;
+        border: 1px solid $yellow;
+        box-shadow: 0px 0px 20px white;
         .homeblockcontact__boton__icon{
             font-size: 1.75rem;
+            color: white;
         }
         .homeblockcontact__boton__text{
             font-size: map-get($map: $font-sizes, $key: large);
             font-weight: 600;
+            color: white;
         }
     }
 }
@@ -480,8 +524,8 @@ a:visited, a:link{
 footer{
     margin: 0px;
     padding: 0px;
-    background-color: rgba(68, 55, 126, 0.3);
-    padding: 2rem 0rem;
+    background-color: rgba($dark-blue, 0.3);
+    padding: 1.5rem 0rem 0.5rem 0rem;
     margin-top: 2rem;
     justify-content: center;
     align-items: center;
@@ -491,7 +535,7 @@ footer{
             .footerblock__info__text{
                 font-size: 1rem;
                 color: white;
-                font-family: $font-family-secondary;
+                font-family: 'Ubuntu Condensed', sans-serif;
                 letter-spacing: map-get($map: $letter-spacings, $key: x-small);
             }
             .footerblock__info__icons{
@@ -534,23 +578,56 @@ footer{
         .footerblock__iframe{
             padding-right: 4rem;
         }
+        .copyright{
+            margin-top: 1rem;
+            .copyright__text{
+                font-size: 0.7rem;
+                color: white;
+                font-family: 'Ubuntu Condensed', sans-serif;
+                letter-spacing: map-get($map: $letter-spacings, $key: x-small);
+                margin: 0px;
+            }
+        }
     } 
 }
 @media screen and (max-width: 992px){
     footer{
-        padding: 1rem 0rem;
+        padding: 1rem 0rem 0.5rem 0rem;
         margin-top: 1rem;
         .footerblock{
             .footerblock__info{
                 .footerblock__info__text{
                     font-size: map-get($map: $font-sizes, $key: small);
                 }
+                .footerblock__info__icons{
+                    justify-content: center;
+                    margin: 0rem;
+                    padding: 0rem;
+                    
+                    .social-network{
+                        @include social-network; 
+                        a.icoFacebook {
+                            background-color:#3B5998;
+                        }
+                        a.icoInstagram {
+                            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+                            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                        }
+                        a.icoMail {
+                            background-color:#BD3518;
+                        }
+                    }
+                    .social-circle{
+                        @include social-circle;
+                    }
+                }
                 .footerblock__info__contact{
                     margin: 0.5rem;
                     a{
                         margin-bottom: 1rem;
                         h3{
-                            font-size: map-get($map: $font-sizes, $key: large);
+                            font-size: map-get($map: $font-sizes, $key: medium);
                         }
                     }
                 }
@@ -566,14 +643,13 @@ footer{
         .footerblock{
             .footerblock__info{
                 .footerblock__info__text{
-                    font-size: map-get($map: $font-sizes, $key: small);
+                    font-size: 0.85rem;
                 }
                 .footerblock__info__contact{
                     a{
                         margin-bottom: 1rem;
                         h3{
-                            
-                            font-size: map-get($map: $font-sizes, $key: medium);
+                            font-size: map-get($map: $font-sizes, $key: small);
                             padding: 0.75rem 1rem;
                         }
                     }
@@ -581,6 +657,11 @@ footer{
             }
             .footerblock__iframe{
                 padding-right: 15px;
+            }
+            .copyright{
+                .copyright__text{
+                    font-size: 0.6rem;
+                }
             }
         } 
     }
