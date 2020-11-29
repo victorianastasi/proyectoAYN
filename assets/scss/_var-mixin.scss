@@ -11,8 +11,10 @@ $dark41: rgb(41, 41, 41);
 $grey-dark: rgb(25, 25, 25);
 $grey-light: rgb(117, 116, 116);
 $dark-blue: rgb(41, 41, 71);
-$purple: #7A5FFF;
-$green: #01FF89;
+$deep-blue: rgb(34, 34, 59);
+$purple: rgb(122, 95, 255);
+$green: rgb(1, 255, 137);
+
 
 /*background-color*/
 $bg-lightwhite: rgba(white, 0.15);
@@ -31,7 +33,34 @@ $duration: 0.4s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
-
+@keyframes boton-contacto-animation {
+    0%{
+        border: 2px solid $yellow;
+        box-shadow: 0px 0px 10px white;
+    }
+    50%{
+        border: 2px solid $yellow;
+        box-shadow: 0px 0px 25px white;
+    }
+    100%{
+        border: 2px solid $yellow;
+        box-shadow: 0px 0px 10px white;
+    }
+}
+@keyframes bg-cards {
+    0% {
+        background-color: rgba(black, 0.9);
+        box-shadow: 0px 0px 25px white;
+    }
+    50%{
+        background-color: rgba(black, 0.5);
+        box-shadow: 0px 0px 15px white;
+    }
+    100%{
+        background-color: rgba($deep-blue, 0.2);
+        box-shadow: 0px 0px 5px white;
+    }
+}
 /*mixins*/
 @mixin body-text (){
     font-family: 'Lato', sans-serif;

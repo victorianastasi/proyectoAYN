@@ -4,6 +4,28 @@
 /*font-family*/
 /*maps*/
 /*ANIMACIONES*/
+@keyframes boton-contacto-animation {
+  0% {
+    border: 2px solid #f8e805;
+    box-shadow: 0px 0px 10px white; }
+  50% {
+    border: 2px solid #f8e805;
+    box-shadow: 0px 0px 25px white; }
+  100% {
+    border: 2px solid #f8e805;
+    box-shadow: 0px 0px 10px white; } }
+
+@keyframes bg-cards {
+  0% {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 25px white; }
+  50% {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px white; }
+  100% {
+    background-color: rgba(34, 34, 59, 0.2);
+    box-shadow: 0px 0px 5px white; } }
+
 /*mixins*/
 /*titulos de secciones de la web*/
 /*nosotros.html*/
@@ -321,7 +343,7 @@
     margin: 0rem 0.5rem;
     opacity: 0.1; }
   .carousel__reviews .us-reviews-container__indicators .carousel-indicators-reviews .active {
-    background-image: linear-gradient(to right, #7A5FFF, #01FF89);
+    background-image: linear-gradient(to right, #7a5fff, #01ff89);
     opacity: 1;
     transition: all 3s; }
   .carousel__reviews .reviews {
@@ -574,29 +596,19 @@
     .news__box .news__box__title .resaltar {
       color: #f8e805; }
 
-@keyframes example {
-  0% {
-    background-color: rgba(0, 0, 0, 0.9);
-    box-shadow: 0px 0px 25px white; }
-  50% {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 15px white; }
-  100% {
-    background-color: rgba(29, 24, 54, 0.2);
-    box-shadow: 0px 0px 5px white; } }
-
 .news__block {
   justify-content: center;
   align-items: center;
-  background-color: rgba(29, 24, 54, 0.2);
+  background-color: rgba(34, 34, 59, 0.2);
   box-shadow: 0px 0px 5px white;
   margin: 2rem 3rem;
   padding: 0rem 2rem;
   border-radius: 10px;
-  animation-name: example;
+  animation-name: bg-cards;
   animation-duration: 1.5s;
   animation-iteration-count: 1;
-  animation-timing-function: linear; }
+  animation-timing-function: linear;
+  box-shadow: 0px 0px 5px white, 0 0 0 2000px rgba(0, 0, 0, 0); }
   .news__block .news__block__text {
     text-align: center;
     padding: 2rem;
@@ -617,9 +629,8 @@
     .news__block .news__block__img img:hover {
       filter: brightness(110%);
       opacity: 1; }
-
-.news__block:hover {
-  box-shadow: 0px 0px 15px white; }
+  .news__block:hover {
+    box-shadow: 0px 0px 5px white, 0 0 0 2000px rgba(206, 206, 206, 0.2); }
 
 @media screen and (max-width: 992px) {
   .news__block {
@@ -648,7 +659,9 @@
       font-size: 1.2rem; }
     .news__block .news__block__img img {
       width: 100%;
-      transform: scale(1, 1); } }
+      transform: scale(1, 1); }
+  :active {
+    box-shadow: 0px 0px 5px white, 0 0 0 2000px rgba(206, 206, 206, 0.2); } }
 
 /*contacto.html*/
 .contact__title {
@@ -954,6 +967,14 @@ p {
   color: #ecf0f1;
   text-align: center; }
 
+::-moz-selection {
+  background-color: #f8e805;
+  color: black; }
+
+::selection {
+  background-color: #f8e805;
+  color: black; }
+
 a:visited, a:link {
   text-decoration: none;
   color: inherit;
@@ -1244,6 +1265,8 @@ a:visited, a:link {
     font-size: 0.9rem; } }
 
 @media screen and (max-width: 576px) {
+  .homeblock {
+    margin: 4rem 0rem; }
   .homeblockus-bottom {
     margin-bottom: 0rem; }
     .homeblockus-bottom .homeblockus__card {
@@ -1256,8 +1279,7 @@ a:visited, a:link {
         font-size: 0.9rem; }
       .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__text {
         letter-spacing: 0px;
-        font-size: 14px;
-        font-family: 'Poppins', sans-serif; } }
+        font-size: 14px; } }
 
 .homeblock__boton {
   display: flex;
@@ -1365,8 +1387,7 @@ a:visited, a:link {
       margin-top: 1rem; }
       .homeblockproducts .homeblockproducts__box .homeblockproducts__box__text {
         letter-spacing: 0px;
-        font-size: 14px;
-        font-family: 'Poppins', sans-serif; } }
+        font-size: 14px; } }
 
 /*BLOQUE CONTACTO*/
 .homeblockcontact {
@@ -1401,8 +1422,11 @@ a:visited, a:link {
 @media screen and (max-width: 576px) {
   .homeblockcontact__boton {
     padding: 1rem 0rem;
-    border: 2px solid #f8e805;
-    box-shadow: 0px 0px 20px white; }
+    margin: 1rem 0rem;
+    animation-name: boton-contacto-animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite; }
     .homeblockcontact__boton .homeblockcontact__boton__icon {
       font-size: 1.75rem;
       color: white; }
