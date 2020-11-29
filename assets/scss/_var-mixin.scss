@@ -184,7 +184,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         letter-spacing: map-get($map: $letter-spacings, $key: small);
     }
     @media screen and (max-width: 576px){
-        @include format-text($font-family-primary, map-get($map: $font-sizes, $key: medium));
+        @include format-text($font-family-primary, map-get($map: $font-sizes, $key: large));
         letter-spacing: map-get($map: $letter-spacings, $key: x-small);
     }
 }
