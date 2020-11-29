@@ -52,22 +52,37 @@
         padding: 0 10px 5px 10px;
         margin-bottom: 2.5rem;
         transition: all 0.3s;
-        .img-modal-button{
+        text-align: center;
+        cursor: pointer;
+        .products__section__img{
             width: 100%;
             height: 100%;
             border-radius: 10px;
             transition: all 0.5s;
         }
-        .img-modal-button:hover{
+        .products__section__img:hover{
             transform: scale(1.1, 1.1);
         }
         h3{
             padding: 1.5rem 0rem 0.5rem 0rem;
             margin: 0rem;
             color: $lightgrey;
-            @include format-text ($font-family-primary, 14pt);
-            letter-spacing: map-get($map: $letter-spacings, $key: medium);
-            text-align: center;
+            text-shadow: 2px 2px 4px black;
+            display: inline-block;
+            background-color: transparent;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-variant: small-caps;
+            background-image: linear-gradient(yellow, #f8d505);
+            background-size: 70% 2px, auto;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            transition: all .2s ease-out;
+            &:hover{
+                background-size: 100% 2px, auto;
+            }
         }
     }
     .products__section__block:hover{

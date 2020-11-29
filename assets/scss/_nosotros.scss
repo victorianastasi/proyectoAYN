@@ -47,15 +47,27 @@
 .us-info-container__box{
     padding: 0rem;
     margin-bottom: 1rem;
-}
-.us-info-container__box__title{
-    @include block-titles();
-    text-shadow: 2px 2px 4px black;
-    .resaltar{
-        @include highlight();
+    text-align: center;
+    .us-info-container__box__title{
+        @include block-titles();
+        text-shadow: 2px 2px 4px black;
+        display: inline-block;
+        background-color: transparent;
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 5px;
+        background-image: linear-gradient(yellow, #f8d505);
+        background-size: 70% 2px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all .2s ease-out;
+        &:hover{
+            background-size: 100% 2px, auto;
+        }
+        .resaltar{
+            @include highlight();
+        }
     }
 }
-
 .us-info-container-top{
     flex-flow: row wrap;
     justify-content: space-between;
@@ -215,9 +227,22 @@
 
 .us-teamcontainer__top{
     padding: 0rem;
+    text-align: center;
     .us-teamcontainer__top__title{
         @include block-titles();
         text-shadow: 2px 2px 4px black;
+        display: inline-block;
+        background-color: transparent;
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 5px;
+        background-image: linear-gradient(yellow, #f8d505);
+        background-size: 70% 2px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all .2s ease-out;
+        &:hover{
+            background-size: 100% 2px, auto;
+        }
         .resaltar{
             @include highlight();
         }
@@ -274,10 +299,24 @@
 
 /*CAROUSEL DE OPINIONES*/
 .us-reviews-container__box{
+    margin-top: 2rem;
     padding: 0rem;
+    text-align: center;
     .us-reviews-container__box__title{
         @include block-titles();
         text-shadow: 2px 2px 4px black;
+        display: inline-block;
+        background-color: transparent;
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 5px;
+        background-image: linear-gradient(yellow, #f8d505);
+        background-size: 70% 2px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all .2s ease-out;
+        &:hover{
+            background-size: 100% 2px, auto;
+        }
         .resaltar{
             @include highlight();
         }
@@ -305,7 +344,7 @@
     .reviews{
         display: flex;
         justify-content: center;
-        padding: 1rem 0rem;
+        padding: 0rem 0rem;
         animation-name: flip;
         animation-duration: 1s;
         animation-timing-function: ease-in;
@@ -333,7 +372,7 @@
             i{
                 color: $yellow;
                 text-shadow: 0px 0px 10px rgba($yellow, 0.5);
-                margin: 0rem 0.5rem 3rem 0.5rem;
+                margin: 0rem 0.5rem 2rem 0.5rem;
             }
         }
     }
