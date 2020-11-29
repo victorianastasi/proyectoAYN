@@ -22,7 +22,7 @@
             transform: scaleX(-1);
             -webkit-transform: scaleX(-1);
             border-radius: 20px;
-            width: 90%;
+            width: 75%;
             margin: 0rem auto;
         }
     }
@@ -31,7 +31,7 @@
     .us-principal-container{
         .us-principal-container__img{
             .us-principal-container__img__pic{
-                width: 100%;
+                width: 85%;
             }
         }
     }
@@ -66,8 +66,9 @@
         justify-content: center;
         margin: 0rem 0rem 2rem 0rem;
         padding: 0rem 0rem;
-        background-color: rgba(29, 24, 54, 0.2);
+        background-color: rgba($dark-blue, 0.2);
         box-shadow: 0px 0px 5px white;
+        border: 1px solid $lightgrey;
         border-radius: 10px;
         width: 500px;
         .card-img-top{
@@ -77,8 +78,8 @@
             height: 270px;
             img{
                 border-radius: 10px;
-                box-shadow: 0px 0px 10px rgba(68, 55, 126, 0.7);
-                width: 75%;
+                box-shadow: 0px 0px 10px rgba($dark-blue, 0.7);
+                width: 85%;
             }
         }
         .card-body{
@@ -158,11 +159,11 @@
                 height: inherit;
                 img{
                     @include box-shadow-white();
-                    width: 90%;
+                    width: 100%;
                 }
             }
             .card-body{
-                font-size: map-get($map: $font-sizes, $key: small);
+                font-size: 14px;
                 height: inherit;
             }
             .card-body--two{
@@ -188,11 +189,11 @@
                 height: inherit;
                 img{
                     @include box-shadow-white();
-                    width: 95%;
+                    width: 100%;
                 }
             }
             .card-body{
-                font-size: map-get($map: $font-sizes, $key: x-small);
+                font-size: 14px;
                 height: inherit;
             }
             .card-body--two{
@@ -284,17 +285,20 @@
 }
 .carousel__reviews{
     background-color: rgba(black, 0.5);
+    padding: 1rem 0rem;
     margin: 0rem;
     .us-reviews-container__indicators{
-        .carousel-indicators{
+        .carousel-indicators-reviews{
             li{
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
+                width: 50px;
+                height: 4px;
                 margin: 0rem 0.5rem;
+                opacity: 0.1;
             }
             .active{
-                background-color: $yellow;
+                background-image: linear-gradient(to right, $purple, $green);
+                opacity: 1;
+                transition: all 3s;
             }
         }
     }
@@ -302,6 +306,9 @@
         display: flex;
         justify-content: center;
         padding: 1rem 0rem;
+        animation-name: flip;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
         .reviews__icon{
             display: flex;
             flex-flow: row wrap;
@@ -314,18 +321,18 @@
             }
         }
         .review__text{
-            @include format-text($font-family-primary, map-get($map: $font-sizes, $key: x-large));
+            @include format-text('Ubuntu', map-get($map: $font-sizes, $key: large));
             padding: 1rem 0rem;
             color: $lightgrey;
         } 
         .review__name{
-            @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: medium));
+            @include format-text('Ubuntu', map-get($map: $font-sizes, $key: medium));
             color: $mediumgrey;
         }
         .review__icon__star{
             i{
-                color: yellow;
-                text-shadow: 0px 0px 10px $mediumgrey;
+                color: $yellow;
+                text-shadow: 0px 0px 10px rgba($yellow, 0.5);
                 margin: 0rem 0.5rem 3rem 0.5rem;
             }
         }
@@ -335,20 +342,41 @@
     .carousel__reviews{
         .reviews{
             .review__text{
-                @include format-text($font-family-primary, map-get($map: $font-sizes, $key: large));
+                @include format-text('Ubuntu', map-get($map: $font-sizes, $key: medium));
                 padding: 1rem 0rem;
-                color: $lightgrey;
+            }
+            .review__name{
+                @include format-text('Ubuntu', map-get($map: $font-sizes, $key: small));
             }
         }
     }
 }
 @media screen and (max-width: 576px){
     .carousel__reviews{
+        padding: 1rem 0rem;
+        .us-reviews-container__indicators{
+            .carousel-indicators{
+                li{
+                    width: 30px;
+                    height: 3px;
+                }
+            }
+        }
+        .reviews__icon{
+            .icon-gmaps{
+                width: 75px;
+                height: 75px;
+            }
+        }
         .reviews{
             .review__text{
-                @include format-text($font-family-primary, map-get($map: $font-sizes, $key: large));
+                @include format-text('Ubuntu', map-get($map: $font-sizes, $key: medium));
                 padding: 1rem 0rem;
-                color: $lightgrey;
+                height: 80px;
+                text-align: center;
+            }
+            .review__name{
+                @include format-text('Ubuntu', map-get($map: $font-sizes, $key: small));
             }
         }
     }

@@ -5,13 +5,7 @@
 /*maps*/
 /*ANIMACIONES*/
 /*mixins*/
-/*titulos de sectiones de la web*/
-@keyframes underline-gradient {
-  0% {
-    transform: translate3d(0%, 0%, 0); }
-  100% {
-    transform: translate3d(-75%, 0%, 0); } }
-
+/*titulos de secciones de la web*/
 /*nosotros.html*/
 /*CUADRO PRINCIPAL*/
 .us-principal-container {
@@ -61,12 +55,12 @@
       transform: scaleX(-1);
       -webkit-transform: scaleX(-1);
       border-radius: 20px;
-      width: 90%;
+      width: 75%;
       margin: 0rem auto; }
 
 @media screen and (max-width: 992px) {
   .us-principal-container .us-principal-container__img .us-principal-container__img__pic {
-    width: 100%; } }
+    width: 85%; } }
 
 @media screen and (max-width: 576px) {
   .us-principal-container__img .us-principal-container__img__pic {
@@ -116,8 +110,9 @@
     justify-content: center;
     margin: 0rem 0rem 2rem 0rem;
     padding: 0rem 0rem;
-    background-color: rgba(29, 24, 54, 0.2);
+    background-color: rgba(41, 41, 71, 0.2);
     box-shadow: 0px 0px 5px white;
+    border: 1px solid #ecf0f1;
     border-radius: 10px;
     width: 500px; }
     .us-info-container-top .card .card-img-top {
@@ -127,8 +122,8 @@
       height: 270px; }
       .us-info-container-top .card .card-img-top img {
         border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(68, 55, 126, 0.7);
-        width: 75%; }
+        box-shadow: 0px 0px 10px rgba(41, 41, 71, 0.7);
+        width: 85%; }
     .us-info-container-top .card .card-body {
       font-size: 1rem;
       height: 160px; }
@@ -185,9 +180,9 @@
         height: inherit; }
         .us-info-container-top .card .card-img-top img {
           box-shadow: 0px 0px 10px white;
-          width: 90%; }
+          width: 100%; }
       .us-info-container-top .card .card-body {
-        font-size: 0.9rem;
+        font-size: 14px;
         height: inherit; }
       .us-info-container-top .card .card-body--two {
         height: inherit; }
@@ -204,9 +199,9 @@
         height: inherit; }
         .us-info-container-top .card .card-img-top img {
           box-shadow: 0px 0px 10px white;
-          width: 95%; }
+          width: 100%; }
       .us-info-container-top .card .card-body {
-        font-size: 0.8rem;
+        font-size: 14px;
         height: inherit; }
       .us-info-container-top .card .card-body--two {
         height: inherit; }
@@ -318,18 +313,24 @@
 
 .carousel__reviews {
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 0rem;
   margin: 0rem; }
-  .carousel__reviews .us-reviews-container__indicators .carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0rem 0.5rem; }
-  .carousel__reviews .us-reviews-container__indicators .carousel-indicators .active {
-    background-color: #f8e805; }
+  .carousel__reviews .us-reviews-container__indicators .carousel-indicators-reviews li {
+    width: 50px;
+    height: 4px;
+    margin: 0rem 0.5rem;
+    opacity: 0.1; }
+  .carousel__reviews .us-reviews-container__indicators .carousel-indicators-reviews .active {
+    background-image: linear-gradient(to right, #7A5FFF, #01FF89);
+    opacity: 1;
+    transition: all 3s; }
   .carousel__reviews .reviews {
     display: flex;
     justify-content: center;
-    padding: 1rem 0rem; }
+    padding: 1rem 0rem;
+    animation-name: flip;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
     .carousel__reviews .reviews .reviews__icon {
       display: flex;
       flex-flow: row wrap;
@@ -340,32 +341,46 @@
         max-width: 90px;
         max-height: 90px; }
     .carousel__reviews .reviews .review__text {
-      font-family: "Oswald", sans-serif;
-      font-size: 1.5rem;
+      font-family: "Ubuntu";
+      font-size: 1.2rem;
       padding: 1rem 0rem;
       color: #ecf0f1; }
     .carousel__reviews .reviews .review__name {
-      font-family: "Open sans", sans-serif;
+      font-family: "Ubuntu";
       font-size: 1rem;
       color: #cecece; }
     .carousel__reviews .reviews .review__icon__star i {
-      color: yellow;
-      text-shadow: 0px 0px 10px #cecece;
+      color: #f8e805;
+      text-shadow: 0px 0px 10px rgba(248, 232, 5, 0.5);
       margin: 0rem 0.5rem 3rem 0.5rem; }
 
 @media screen and (max-width: 992px) {
   .carousel__reviews .reviews .review__text {
-    font-family: "Oswald", sans-serif;
-    font-size: 1.2rem;
-    padding: 1rem 0rem;
-    color: #ecf0f1; } }
+    font-family: "Ubuntu";
+    font-size: 1rem;
+    padding: 1rem 0rem; }
+  .carousel__reviews .reviews .review__name {
+    font-family: "Ubuntu";
+    font-size: 0.9rem; } }
 
 @media screen and (max-width: 576px) {
-  .carousel__reviews .reviews .review__text {
-    font-family: "Oswald", sans-serif;
-    font-size: 1.2rem;
-    padding: 1rem 0rem;
-    color: #ecf0f1; } }
+  .carousel__reviews {
+    padding: 1rem 0rem; }
+    .carousel__reviews .us-reviews-container__indicators .carousel-indicators li {
+      width: 30px;
+      height: 3px; }
+    .carousel__reviews .reviews__icon .icon-gmaps {
+      width: 75px;
+      height: 75px; }
+    .carousel__reviews .reviews .review__text {
+      font-family: "Ubuntu";
+      font-size: 1rem;
+      padding: 1rem 0rem;
+      height: 80px;
+      text-align: center; }
+    .carousel__reviews .reviews .review__name {
+      font-family: "Ubuntu";
+      font-size: 0.9rem; } }
 
 /*productos.html*/
 .products__title {
@@ -1006,8 +1021,8 @@ a:visited, a:link {
 /*Navbar MENU*/
 .navmenu {
   background-color: rgba(10, 10, 10, 0.6);
-  height: 130px;
-  padding: 1.5rem 0rem 1rem 0rem;
+  height: 100px;
+  padding: 0.5rem 0rem;
   margin: 0rem; }
   .navmenu .navmenu__bar {
     color: #ecf0f1; }
@@ -1061,7 +1076,7 @@ a:visited, a:link {
 
 @media screen and (max-width: 992px) {
   .navmenu {
-    height: 110px;
+    height: 100px;
     padding: 1rem 0rem; }
     .navmenu .navmenu__bar .navbar-brand img {
       width: 180px;
