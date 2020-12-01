@@ -222,25 +222,20 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 @mixin carousel-titles(){
     justify-content: center;
+    background-color: $bg-lightwhite;
     padding: 1rem 0rem;
-    margin: 1rem 0rem;
-    @include format-text('Ubuntu', map-get($map: $font-sizes, $key: xx-large));
-    text-shadow: 4px 4px 4px $dark20;
+    margin: 1rem 0rem 0rem 0rem;
+    font-family: 'Ubunto', sans-serif;
+    font-size: 1.8rem;
+    text-shadow: 4px 4px 2px $dark20;
     text-align: center;
     color: white;
     font-weight: 600;
     letter-spacing: 5px;
-    font-variant: small-caps;
-    display: inline-block;
-    background-image: linear-gradient(yellow, #f8d505);
-    background-size: 70% 2px, auto;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    transition: all .2s ease-out;
-    &:hover{
-        background-size: 100% 2px, auto;
+    text-transform: uppercase;
+    &:first-letter{
+        color: $yellow;
     }
-    
     @media screen and (max-width: 992px){
         padding: 0.75rem 0rem;
         margin: 0.75rem 0rem;
@@ -249,6 +244,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     @media screen and (max-width: 576px){
         padding: 0.5rem 0rem;
         margin: 0.5rem 0rem;
-        font-size: 1.4rem;
+        letter-spacing: 2px;
+        font-size: 1.3rem;
     }
 }
