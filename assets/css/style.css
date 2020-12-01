@@ -26,6 +26,14 @@
     background-color: rgba(34, 34, 59, 0.2);
     box-shadow: 0px 0px 5px white; } }
 
+@keyframes animation-box {
+  0% {
+    box-shadow: 0px 0px 10px #f8e805; }
+  50% {
+    box-shadow: 0px 0px 20px #f8e805; }
+  100% {
+    box-shadow: 0px 0px 10px #f8e805; } }
+
 /*mixins*/
 /*titulos de secciones de la web*/
 /*nosotros.html*/
@@ -681,10 +689,11 @@
     .contact__title {
       font-size: 1.75rem; } }
 
+/*BLOQUE DE INFORMACION*/
 .contact__info {
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(29, 24, 54, 0.2);
+  background-color: rgba(34, 34, 59, 0.2);
   border-radius: 20px;
   padding: 1rem;
   margin: 2rem auto;
@@ -692,12 +701,13 @@
   box-shadow: 0px 0px 10px #f8e805; }
   .contact__info .contact__info__text {
     padding-bottom: 1rem;
-    font-family: "Open sans", sans-serif;
     word-spacing: 0.2rem; }
     .contact__info .contact__info__text .contact__info__text__data {
       padding-bottom: 1rem; }
       .contact__info .contact__info__text .contact__info__text__data p {
         margin: 0rem; }
+        .contact__info .contact__info__text .contact__info__text__data p .resaltar-info {
+          font-weight: 700; }
     .contact__info .contact__info__text .contact__info__text__blockicons {
       justify-content: center;
       margin: 0rem;
@@ -711,6 +721,14 @@
           background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
           background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
         .contact__info .contact__info__text .contact__info__text__blockicons .contact__info__text__blockicons__icon a.icoMail:hover {
+          background-color: #BD3518; }
+        .contact__info .contact__info__text .contact__info__text__blockicons .contact__info__text__blockicons__icon a.icoFacebook {
+          background-color: #3B5998; }
+        .contact__info .contact__info__text .contact__info__text__blockicons .contact__info__text__blockicons__icon a.icoInstagram {
+          background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .contact__info .contact__info__text .contact__info__text__blockicons .contact__info__text__blockicons__icon a.icoMail {
           background-color: #BD3518; }
         .contact__info .contact__info__text .contact__info__text__blockicons .contact__info__text__blockicons__icon li {
           list-style: none;
@@ -770,15 +788,21 @@
       height: 270px; }
 
 @media screen and (max-width: 992px) {
+  .contact__info .contact__info__text {
+    font-size: 0.9rem; }
   .contact__info .contact__info__iframe iframe {
     width: 100%;
     height: 180px; } }
 
 @media screen and (max-width: 576px) {
   .contact__info {
-    padding: 1rem 0rem; }
+    padding: 1rem 0rem;
+    animation-name: animation-box;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s; }
     .contact__info .contact__info__text {
-      font-size: 0.9rem;
+      font-size: 14px;
       word-spacing: 0rem;
       padding-left: 0rem;
       padding-right: 0rem; }
@@ -789,31 +813,40 @@
       width: 100%;
       height: 150px; } }
 
+/*FORMULARIO DE CONTACTO*/
 .contact-form {
   justify-content: center; }
   .contact-form form {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-image: linear-gradient(to bottom, rgba(41, 41, 71, 0.3), rgba(236, 240, 241, 0.3));
     margin: 0px auto 0px auto;
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
     border-radius: 20px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 1rem;
     color: #ecf0f1;
-    font-size: 1rem;
     text-align: center; }
     .contact-form form fieldset {
       border: 2px solid #ecf0f1;
       margin: 1rem 3rem;
-      padding: 2rem 0rem; }
+      padding: 0rem 0rem 2rem 0rem; }
       .contact-form form fieldset legend {
         width: inherit;
         margin: 0rem auto;
-        font-family: "Open sans", sans-serif;
+        font-family: "Ubuntu";
         font-size: 1.5rem;
         font-weight: 600;
         font-variant: small-caps;
-        letter-spacing: 0.5rem; }
+        letter-spacing: 0.3rem; }
+      .contact-form form fieldset .form-info-text {
+        padding: 0.5rem 0rem 1rem 0rem; }
+        .contact-form form fieldset .form-info-text p {
+          padding: 0rem;
+          margin: 0;
+          font-family: 'Ubuntu', sans-serif; }
+        .contact-form form fieldset .form-info-text .small-text {
+          font-size: 0.8rem;
+          padding: 0; }
       .contact-form form fieldset .form-group, .contact-form form fieldset .form-group__buttons {
         display: flex;
         flex-flow: row wrap;
@@ -865,56 +898,63 @@
           width: 550px; }
       .contact-form form fieldset .form-group__buttons .button__form {
         background-color: rgba(248, 232, 5, 0.95);
-        color: #0a0a0a;
-        font-family: "Open sans", sans-serif;
+        color: black;
+        font-family: "Ubuntu";
         font-size: 1rem;
-        border: 1px solid white;
-        box-shadow: 0px 0px 5px #cecece;
+        border: 2px solid white;
+        box-shadow: 0px 5px 5px #0a0a0a;
         margin: 0rem 1rem;
         width: 200px;
         transition: all 0.2s; }
       .contact-form form fieldset .form-group__buttons .button__form:hover {
         background-color: #0a0a0a;
-        border: 1px solid rgba(248, 232, 5, 0.95);
-        color: white; }
+        border: 2px solid rgba(248, 232, 5, 0.95);
+        color: white;
+        box-shadow: 0px 0px 15px white; }
       .contact-form form fieldset .form-group__buttons .button__form--reset {
-        background-color: rgba(255, 246, 121, 0.8); }
+        background-color: rgba(255, 255, 255, 0.95); }
 
 @media screen and (max-width: 992px) {
-  .contact-form form fieldset {
-    margin: 1rem 2rem; }
-    .contact-form form fieldset .form-group, .contact-form form fieldset .form-group__buttons {
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      justify-content: center;
-      margin: 1rem 0rem; }
-      .contact-form form fieldset .form-group .form-group__text, .contact-form form fieldset .form-group__buttons .form-group__text {
-        margin: 0rem; }
-    .contact-form form fieldset .form-group__textarea .form-group__textarea__text {
-      width: 150px; }
-    .contact-form form fieldset .form-group__textarea .form-group__textarea__textarea {
-      width: 400px; }
-    .contact-form form fieldset .form-group__textarea .form-group__textarea__textarea:focus {
-      width: 450px;
-      height: 150px; }
-    .contact-form form fieldset .form-group__buttons {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      margin-bottom: 2rem; } }
+  .contact-form form {
+    font-size: 0.9rem; }
+    .contact-form form fieldset {
+      margin: 1rem 2rem; }
+      .contact-form form fieldset .form-group, .contact-form form fieldset .form-group__buttons {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0rem; }
+        .contact-form form fieldset .form-group .form-group__text, .contact-form form fieldset .form-group__buttons .form-group__text {
+          margin: 0rem; }
+      .contact-form form fieldset .form-group__textarea .form-group__textarea__text {
+        width: 150px; }
+      .contact-form form fieldset .form-group__textarea .form-group__textarea__textarea {
+        width: 400px; }
+      .contact-form form fieldset .form-group__textarea .form-group__textarea__textarea:focus {
+        width: 450px;
+        height: 150px; }
+      .contact-form form fieldset .form-group__buttons {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin-bottom: 2rem; } }
 
 @media screen and (max-width: 576px) {
   .contact-form form {
-    font-size: 0.9rem;
+    font-size: 14px;
     padding: 1rem 0rem; }
     .contact-form form fieldset {
-      margin: 0.5rem 0.5rem;
-      padding: 1rem 0rem; }
+      margin: 0.5rem 0.5rem; }
       .contact-form form fieldset legend {
-        font-family: "Open sans", sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         letter-spacing: 0.1rem; }
+      .contact-form form fieldset .form-info-text {
+        padding: 0.25rem 0rem 0.5rem 0rem; }
+        .contact-form form fieldset .form-info-text p {
+          font-size: 14px; }
+        .contact-form form fieldset .form-info-text .small-text {
+          font-size: 11px; }
       .contact-form form fieldset .form-group, .contact-form form fieldset .form-group__buttons {
         display: flex;
         flex-flow: column wrap;
@@ -945,8 +985,7 @@
         margin-bottom: 0rem; }
         .contact-form form fieldset .form-group__buttons .button__form {
           margin: 0.5rem 0rem;
-          font-family: "Open sans", sans-serif;
-          font-size: 0.9rem;
+          font-size: 14px;
           width: 200px;
           transition: all 0.2s; } }
 
