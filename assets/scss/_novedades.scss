@@ -7,20 +7,7 @@
     padding: 0rem;
     text-align: center;
     .news__box__title{
-        @include block-titles();
-        text-shadow: 2px 2px 4px black;
-        display: inline-block;
-        background-color: transparent;
-        font-family: 'Ubuntu', sans-serif;
-        letter-spacing: 5px;
-        background-image: linear-gradient(yellow, #f8d505);
-        background-size: 70% 2px, auto;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        transition: all .2s ease-out;
-        &:hover{
-            background-size: 100% 2px, auto;
-        }
+        @include block-title-underline();
         .resaltar{
             @include highlight();
         }
@@ -105,7 +92,6 @@
         }
     }
 }
-
 @media screen and (max-width: 576px){
     .news__block{
         margin: 2rem 0rem;

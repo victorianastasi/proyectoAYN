@@ -49,20 +49,7 @@
     margin-bottom: 1rem;
     text-align: center;
     .us-info-container__box__title{
-        @include block-titles();
-        text-shadow: 2px 2px 4px black;
-        display: inline-block;
-        background-color: transparent;
-        font-family: 'Ubuntu', sans-serif;
-        letter-spacing: 5px;
-        background-image: linear-gradient(yellow, #f8d505);
-        background-size: 70% 2px, auto;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        transition: all .2s ease-out;
-        &:hover{
-            background-size: 100% 2px, auto;
-        }
+        @include block-title-underline();
         .resaltar{
             @include highlight();
         }
@@ -78,7 +65,7 @@
         justify-content: center;
         margin: 0rem 0rem 2rem 0rem;
         padding: 0rem 0rem;
-        background-color: rgba($dark-blue, 0.2);
+        background-color: rgba($deep-blue, 0.2);
         box-shadow: 0px 0px 5px white;
         border: 1px solid $lightgrey;
         border-radius: 10px;
@@ -87,7 +74,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 270px;
+            padding: 1rem 0rem;
             img{
                 border-radius: 10px;
                 box-shadow: 0px 0px 10px rgba($dark-blue, 0.7);
@@ -96,14 +83,10 @@
         }
         .card-body{
             font-size: map-get($map: $font-sizes, $key: medium);
-            height: 160px;
             .resaltar{
                 font-weight: 800;
                 color: $yellow;
             }
-        }
-        .card-body--two{
-            height: 130px;
         }
     }   
 }
@@ -124,10 +107,7 @@
         .card{
             width: 400px;
             .card-body{
-                height: 200px;
-            }
-            .card-body--two{
-                height: 160px;
+                padding-top: 0.5rem;
             }
         }   
     }
@@ -139,17 +119,9 @@
         .card{
             width: 310px;
             .card-img-top{
-                height: 220px;
                 img{
-                    @include box-shadow-white();
                     width: 90%;
                 }
-            }
-            .card-body{
-                height: 250px;
-            }
-            .card-body--two{
-                height: 180px;
             }
         }   
     }
@@ -168,18 +140,12 @@
         .card{
             width: 450px;
             .card-img-top{
-                height: inherit;
                 img{
-                    @include box-shadow-white();
                     width: 100%;
                 }
             }
             .card-body{
                 font-size: 14px;
-                height: inherit;
-            }
-            .card-body--two{
-                height: inherit;
             }
         }   
     }
@@ -198,18 +164,12 @@
         .card{
             width: 300px;
             .card-img-top{
-                height: inherit;
                 img{
-                    @include box-shadow-white();
                     width: 100%;
                 }
             }
             .card-body{
                 font-size: 14px;
-                height: inherit;
-            }
-            .card-body--two{
-                height: inherit;
             }
         }   
     }
@@ -229,20 +189,7 @@
     padding: 0rem;
     text-align: center;
     .us-teamcontainer__top__title{
-        @include block-titles();
-        text-shadow: 2px 2px 4px black;
-        display: inline-block;
-        background-color: transparent;
-        font-family: 'Ubuntu', sans-serif;
-        letter-spacing: 5px;
-        background-image: linear-gradient(yellow, #f8d505);
-        background-size: 70% 2px, auto;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        transition: all .2s ease-out;
-        &:hover{
-            background-size: 100% 2px, auto;
-        }
+        @include block-title-underline();
         .resaltar{
             @include highlight();
         }
@@ -303,20 +250,7 @@
     padding: 0rem;
     text-align: center;
     .us-reviews-container__box__title{
-        @include block-titles();
-        text-shadow: 2px 2px 4px black;
-        display: inline-block;
-        background-color: transparent;
-        font-family: 'Ubuntu', sans-serif;
-        letter-spacing: 5px;
-        background-image: linear-gradient(yellow, #f8d505);
-        background-size: 70% 2px, auto;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        transition: all .2s ease-out;
-        &:hover{
-            background-size: 100% 2px, auto;
-        }
+        @include block-title-underline();
         .resaltar{
             @include highlight();
         }
@@ -360,12 +294,12 @@
             }
         }
         .review__text{
-            @include format-text('Ubuntu', map-get($map: $font-sizes, $key: large));
+            @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: large));
             padding: 1rem 0rem;
             color: $lightgrey;
         } 
         .review__name{
-            @include format-text('Ubuntu', map-get($map: $font-sizes, $key: medium));
+            @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: medium));
             color: $mediumgrey;
         }
         .review__icon__star{
@@ -381,11 +315,11 @@
     .carousel__reviews{
         .reviews{
             .review__text{
-                @include format-text('Ubuntu', map-get($map: $font-sizes, $key: medium));
+                @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: medium));
                 padding: 1rem 0rem;
             }
             .review__name{
-                @include format-text('Ubuntu', map-get($map: $font-sizes, $key: small));
+                @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: small));
             }
         }
     }
@@ -409,13 +343,13 @@
         }
         .reviews{
             .review__text{
-                @include format-text('Ubuntu', map-get($map: $font-sizes, $key: medium));
+                @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: medium));
                 padding: 1rem 0rem;
                 height: 80px;
                 text-align: center;
             }
             .review__name{
-                @include format-text('Ubuntu', map-get($map: $font-sizes, $key: small));
+                @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: small));
             }
         }
     }

@@ -30,7 +30,7 @@
   0% {
     box-shadow: 0px 0px 10px #f8e805; }
   50% {
-    box-shadow: 0px 0px 20px #f8e805; }
+    box-shadow: 0px 0px 25px #f8e805; }
   100% {
     box-shadow: 0px 0px 10px #f8e805; } }
 
@@ -62,22 +62,23 @@
         .us-principal-container .us-principal-container__text .us-principal-container__text__title {
           font-size: 1.75rem; } }
     .us-principal-container .us-principal-container__text .us-principal-container__text__subtitle {
-      font-family: "Oswald", sans-serif;
-      font-size: 1.5rem;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1.3rem;
       text-shadow: 2px 2px 4px #cecece;
       font-weight: 400;
-      letter-spacing: 0.3rem;
+      color: white;
+      letter-spacing: 0.2rem;
       margin: 0.5rem 0rem 0rem 0rem; }
       @media screen and (max-width: 992px) {
         .us-principal-container .us-principal-container__text .us-principal-container__text__subtitle {
-          font-family: "Oswald", sans-serif;
-          font-size: 1.2rem;
-          letter-spacing: 0.2rem; } }
+          font-family: "Ubuntu", sans-serif;
+          font-size: 1rem;
+          letter-spacing: 0.1rem; } }
       @media screen and (max-width: 576px) {
         .us-principal-container .us-principal-container__text .us-principal-container__text__subtitle {
-          font-family: "Oswald", sans-serif;
-          font-size: 1.2rem;
-          letter-spacing: 0.1rem; } }
+          font-family: "Ubuntu", sans-serif;
+          font-size: 0.9rem;
+          letter-spacing: 0px; } }
   .us-principal-container .us-principal-container__img {
     display: flex;
     justify-content: center; }
@@ -103,41 +104,37 @@
   text-align: center; }
   .us-info-container__box .us-info-container__box__title {
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.15);
     padding: 1rem 0rem;
     margin: 1rem 0rem;
-    font-family: "Oswald", sans-serif;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
     font-size: 2rem;
-    text-shadow: 4px 4px 4px #141414;
-    text-align: center;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 2px 2px 4px black;
-    display: inline-block;
-    background-color: transparent;
-    font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 0.3rem;
     background-image: linear-gradient(yellow, #f8d505);
     background-size: 70% 2px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .2s ease-out; }
+    .us-info-container__box .us-info-container__box__title:hover {
+      background-size: 100% 2px, auto; }
     @media screen and (max-width: 992px) {
       .us-info-container__box .us-info-container__box__title {
         padding: 0.75rem 0rem;
         margin: 0.75rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.5rem;
         letter-spacing: 0.3rem; } }
     @media screen and (max-width: 576px) {
       .us-info-container__box .us-info-container__box__title {
         padding: 0.5rem 0rem;
         margin: 0.5rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.4rem;
         letter-spacing: 0.2rem; } }
-    .us-info-container__box .us-info-container__box__title:hover {
-      background-size: 100% 2px, auto; }
     .us-info-container__box .us-info-container__box__title .resaltar {
       color: #f8e805; }
 
@@ -151,7 +148,7 @@
     justify-content: center;
     margin: 0rem 0rem 2rem 0rem;
     padding: 0rem 0rem;
-    background-color: rgba(41, 41, 71, 0.2);
+    background-color: rgba(34, 34, 59, 0.2);
     box-shadow: 0px 0px 5px white;
     border: 1px solid #ecf0f1;
     border-radius: 10px;
@@ -160,19 +157,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 270px; }
+      padding: 1rem 0rem; }
       .us-info-container-top .card .card-img-top img {
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(41, 41, 71, 0.7);
         width: 85%; }
     .us-info-container-top .card .card-body {
-      font-size: 1rem;
-      height: 160px; }
+      font-size: 1rem; }
       .us-info-container-top .card .card-body .resaltar {
         font-weight: 800;
         color: #f8e805; }
-    .us-info-container-top .card .card-body--two {
-      height: 130px; }
 
 .us-info-container-bottom {
   justify-content: center;
@@ -189,9 +183,7 @@
     .us-info-container-top .card {
       width: 400px; }
       .us-info-container-top .card .card-body {
-        height: 200px; }
-      .us-info-container-top .card .card-body--two {
-        height: 160px; } }
+        padding-top: 0.5rem; } }
 
 @media screen and (max-width: 992px) {
   .us-info-container-top {
@@ -199,15 +191,8 @@
     margin: 0rem; }
     .us-info-container-top .card {
       width: 310px; }
-      .us-info-container-top .card .card-img-top {
-        height: 220px; }
-        .us-info-container-top .card .card-img-top img {
-          box-shadow: 0px 0px 10px white;
-          width: 90%; }
-      .us-info-container-top .card .card-body {
-        height: 250px; }
-      .us-info-container-top .card .card-body--two {
-        height: 180px; }
+      .us-info-container-top .card .card-img-top img {
+        width: 90%; }
   .us-info-container-bottom .us-info-container-bottom__img img {
     width: 40%; } }
 
@@ -217,16 +202,10 @@
     margin: 0rem; }
     .us-info-container-top .card {
       width: 450px; }
-      .us-info-container-top .card .card-img-top {
-        height: inherit; }
-        .us-info-container-top .card .card-img-top img {
-          box-shadow: 0px 0px 10px white;
-          width: 100%; }
+      .us-info-container-top .card .card-img-top img {
+        width: 100%; }
       .us-info-container-top .card .card-body {
-        font-size: 14px;
-        height: inherit; }
-      .us-info-container-top .card .card-body--two {
-        height: inherit; }
+        font-size: 14px; }
   .us-info-container-bottom .us-info-container-bottom__img img {
     width: 50%; } }
 
@@ -236,16 +215,10 @@
     margin: 0rem; }
     .us-info-container-top .card {
       width: 300px; }
-      .us-info-container-top .card .card-img-top {
-        height: inherit; }
-        .us-info-container-top .card .card-img-top img {
-          box-shadow: 0px 0px 10px white;
-          width: 100%; }
+      .us-info-container-top .card .card-img-top img {
+        width: 100%; }
       .us-info-container-top .card .card-body {
-        font-size: 14px;
-        height: inherit; }
-      .us-info-container-top .card .card-body--two {
-        height: inherit; }
+        font-size: 14px; }
   .us-info-container-bottom {
     font-size: 0.9rem; }
     .us-info-container-bottom .us-info-container-bottom__img img {
@@ -257,41 +230,37 @@
   text-align: center; }
   .us-teamcontainer__top .us-teamcontainer__top__title {
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.15);
     padding: 1rem 0rem;
     margin: 1rem 0rem;
-    font-family: "Oswald", sans-serif;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
     font-size: 2rem;
-    text-shadow: 4px 4px 4px #141414;
-    text-align: center;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 2px 2px 4px black;
-    display: inline-block;
-    background-color: transparent;
-    font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 0.3rem;
     background-image: linear-gradient(yellow, #f8d505);
     background-size: 70% 2px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .2s ease-out; }
+    .us-teamcontainer__top .us-teamcontainer__top__title:hover {
+      background-size: 100% 2px, auto; }
     @media screen and (max-width: 992px) {
       .us-teamcontainer__top .us-teamcontainer__top__title {
         padding: 0.75rem 0rem;
         margin: 0.75rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.5rem;
         letter-spacing: 0.3rem; } }
     @media screen and (max-width: 576px) {
       .us-teamcontainer__top .us-teamcontainer__top__title {
         padding: 0.5rem 0rem;
         margin: 0.5rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.4rem;
         letter-spacing: 0.2rem; } }
-    .us-teamcontainer__top .us-teamcontainer__top__title:hover {
-      background-size: 100% 2px, auto; }
     .us-teamcontainer__top .us-teamcontainer__top__title .resaltar {
       color: #f8e805; }
 
@@ -339,41 +308,37 @@
   text-align: center; }
   .us-reviews-container__box .us-reviews-container__box__title {
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.15);
     padding: 1rem 0rem;
     margin: 1rem 0rem;
-    font-family: "Oswald", sans-serif;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
     font-size: 2rem;
-    text-shadow: 4px 4px 4px #141414;
-    text-align: center;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 2px 2px 4px black;
-    display: inline-block;
-    background-color: transparent;
-    font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 0.3rem;
     background-image: linear-gradient(yellow, #f8d505);
     background-size: 70% 2px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .2s ease-out; }
+    .us-reviews-container__box .us-reviews-container__box__title:hover {
+      background-size: 100% 2px, auto; }
     @media screen and (max-width: 992px) {
       .us-reviews-container__box .us-reviews-container__box__title {
         padding: 0.75rem 0rem;
         margin: 0.75rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.5rem;
         letter-spacing: 0.3rem; } }
     @media screen and (max-width: 576px) {
       .us-reviews-container__box .us-reviews-container__box__title {
         padding: 0.5rem 0rem;
         margin: 0.5rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.4rem;
         letter-spacing: 0.2rem; } }
-    .us-reviews-container__box .us-reviews-container__box__title:hover {
-      background-size: 100% 2px, auto; }
     .us-reviews-container__box .us-reviews-container__box__title .resaltar {
       color: #f8e805; }
 
@@ -407,12 +372,12 @@
         max-width: 90px;
         max-height: 90px; }
     .carousel__reviews .reviews .review__text {
-      font-family: "Ubuntu";
+      font-family: "Ubuntu", sans-serif;
       font-size: 1.2rem;
       padding: 1rem 0rem;
       color: #ecf0f1; }
     .carousel__reviews .reviews .review__name {
-      font-family: "Ubuntu";
+      font-family: "Ubuntu", sans-serif;
       font-size: 1rem;
       color: #cecece; }
     .carousel__reviews .reviews .review__icon__star i {
@@ -422,11 +387,11 @@
 
 @media screen and (max-width: 992px) {
   .carousel__reviews .reviews .review__text {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 1rem;
     padding: 1rem 0rem; }
   .carousel__reviews .reviews .review__name {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 0.9rem; } }
 
 @media screen and (max-width: 576px) {
@@ -439,13 +404,13 @@
       width: 75px;
       height: 75px; }
     .carousel__reviews .reviews .review__text {
-      font-family: "Ubuntu";
+      font-family: "Ubuntu", sans-serif;
       font-size: 1rem;
       padding: 1rem 0rem;
       height: 80px;
       text-align: center; }
     .carousel__reviews .reviews .review__name {
-      font-family: "Ubuntu";
+      font-family: "Ubuntu", sans-serif;
       font-size: 0.9rem; } }
 
 /*productos.html*/
@@ -494,7 +459,7 @@
     background-color: rgba(255, 255, 255, 0.15);
     padding: 1rem 0rem;
     margin: 1rem 0rem 0rem 0rem;
-    font-family: 'Ubunto', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 1.8rem;
     text-shadow: 4px 4px 2px #141414;
     text-align: center;
@@ -565,41 +530,37 @@
   text-align: center; }
   .news__box .news__box__title {
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.15);
     padding: 1rem 0rem;
     margin: 1rem 0rem;
-    font-family: "Oswald", sans-serif;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
     font-size: 2rem;
-    text-shadow: 4px 4px 4px #141414;
-    text-align: center;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 2px 2px 4px black;
-    display: inline-block;
-    background-color: transparent;
-    font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 0.3rem;
     background-image: linear-gradient(yellow, #f8d505);
     background-size: 70% 2px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .2s ease-out; }
+    .news__box .news__box__title:hover {
+      background-size: 100% 2px, auto; }
     @media screen and (max-width: 992px) {
       .news__box .news__box__title {
         padding: 0.75rem 0rem;
         margin: 0.75rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.5rem;
         letter-spacing: 0.3rem; } }
     @media screen and (max-width: 576px) {
       .news__box .news__box__title {
         padding: 0.5rem 0rem;
         margin: 0.5rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.4rem;
         letter-spacing: 0.2rem; } }
-    .news__box .news__box__title:hover {
-      background-size: 100% 2px, auto; }
     .news__box .news__box__title .resaltar {
       color: #f8e805; }
 
@@ -840,7 +801,7 @@
       .contact-form form fieldset legend {
         width: inherit;
         margin: 0rem auto;
-        font-family: "Ubuntu";
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.5rem;
         font-weight: 600;
         font-variant: small-caps;
@@ -850,7 +811,7 @@
         .contact-form form fieldset .form-info-text p {
           padding: 0rem;
           margin: 0;
-          font-family: 'Ubuntu', sans-serif; }
+          font-family: "Ubuntu", sans-serif; }
         .contact-form form fieldset .form-info-text .small-text {
           font-size: 0.8rem;
           padding: 0; }
@@ -906,7 +867,7 @@
       .contact-form form fieldset .form-group__buttons .button__form {
         background-color: rgba(248, 213, 5, 0.9);
         color: black;
-        font-family: "Ubuntu";
+        font-family: "Ubuntu", sans-serif;
         font-size: 1rem;
         border: 2px solid white;
         box-shadow: 0px 5px 5px #0a0a0a;
@@ -1048,7 +1009,7 @@ a:visited, a:link {
     align-content: center;
     padding: 0rem 0.75rem; }
     .navinfo .navinfo__items .navinfo__items__text {
-      font-family: 'Ubuntu';
+      font-family: "Ubuntu", sans-serif;
       color: #ecf0f1;
       font-size: 0.9rem;
       font-weight: 500;
@@ -1102,7 +1063,7 @@ a:visited, a:link {
     .navmenu .navmenu__bar .navbar-collapse {
       justify-content: flex-end; }
       .navmenu .navmenu__bar .navbar-collapse .navbar-nav .navmenu__bar__link {
-        font-family: "Ubuntu";
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.15rem;
         color: white;
         font-weight: 500;
@@ -1137,7 +1098,7 @@ a:visited, a:link {
       .navmenu .navmenu__bar .navbar-collapse .navbar-nav .nav-link.active {
         color: #fff;
         font-weight: 500;
-        font-family: "Ubuntu";
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.2rem; }
 
 @media screen and (max-width: 992px) {
@@ -1185,7 +1146,7 @@ a:visited, a:link {
     top: 25%;
     left: 10%; }
   .video .home-video-title {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 4rem;
     font-weight: 600;
     color: white;
@@ -1197,14 +1158,14 @@ a:visited, a:link {
   .video .home-video {
     margin: -3rem auto 0rem auto; }
   .video .home-video-title {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 3rem; } }
 
 @media screen and (max-width: 768px) {
   .video .home-video {
     margin: -2rem auto 0rem auto; }
   .video .home-video-title {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 2.5rem; } }
 
 @media screen and (max-width: 576px) {
@@ -1218,14 +1179,14 @@ a:visited, a:link {
     top: 35%;
     left: 10%; }
   .video .home-video-title {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
     font-size: 1.75rem; } }
 
 /*BLOQUE NOSOTROS*/
 .homeblock {
   border: 2px solid rgba(236, 240, 241, 0.8);
   border-radius: 5px;
-  padding: 1rem 0rem 0rem 0rem;
+  padding: 0rem;
   margin: 3rem 0rem;
   justify-content: center; }
   .homeblock .homeblockus__top {
@@ -1234,7 +1195,7 @@ a:visited, a:link {
       justify-content: center;
       background-color: rgba(255, 255, 255, 0.15);
       padding: 1rem 0rem;
-      margin: 1rem 0rem;
+      margin: 0rem;
       font-family: "Oswald", sans-serif;
       font-size: 2rem;
       text-shadow: 4px 4px 4px #141414;
@@ -1246,32 +1207,33 @@ a:visited, a:link {
       @media screen and (max-width: 992px) {
         .homeblock .homeblockus__top .homeblockus__title {
           padding: 0.75rem 0rem;
-          margin: 0.75rem 0rem;
           font-size: 1.5rem;
           letter-spacing: 0.3rem; } }
       @media screen and (max-width: 576px) {
         .homeblock .homeblockus__top .homeblockus__title {
           padding: 0.5rem 0rem;
-          margin: 0.5rem 0rem;
           font-size: 1.4rem;
           letter-spacing: 0.2rem; } }
     .homeblock .homeblockus__top .homeblockus__subtitle {
-      font-family: "Oswald", sans-serif;
-      font-size: 1.5rem;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1.3rem;
       text-shadow: 2px 2px 4px #cecece;
       font-weight: 400;
-      letter-spacing: 0.3rem;
-      margin: 0.5rem 0rem 0rem 0rem; }
+      color: white;
+      letter-spacing: 0.2rem;
+      margin: 0.5rem 0rem 0rem 0rem;
+      padding: 0rem 10rem;
+      font-variant: small-caps; }
       @media screen and (max-width: 992px) {
         .homeblock .homeblockus__top .homeblockus__subtitle {
-          font-family: "Oswald", sans-serif;
-          font-size: 1.2rem;
-          letter-spacing: 0.2rem; } }
+          font-family: "Ubuntu", sans-serif;
+          font-size: 1rem;
+          letter-spacing: 0.1rem; } }
       @media screen and (max-width: 576px) {
         .homeblock .homeblockus__top .homeblockus__subtitle {
-          font-family: "Oswald", sans-serif;
-          font-size: 1.2rem;
-          letter-spacing: 0.1rem; } }
+          font-family: "Ubuntu", sans-serif;
+          font-size: 0.9rem;
+          letter-spacing: 0px; } }
 
 .homeblockus-bottom {
   margin-bottom: 1.5rem; }
@@ -1290,7 +1252,6 @@ a:visited, a:link {
       .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__title {
         text-transform: uppercase;
         margin: 0px;
-        font-family: 'Poppins', sans-serif;
         font-weight: 800;
         font-size: 1.2rem;
         letter-spacing: 0.2rem; }
@@ -1304,14 +1265,22 @@ a:visited, a:link {
     padding: 1.5rem 0.5rem; } }
 
 @media screen and (max-width: 992px) {
+  .homeblock .homeblockus__top .homeblockus__subtitle {
+    padding: 0rem 4rem; }
   .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__title {
     font-size: 1rem; }
   .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__text {
     font-size: 0.9rem; } }
 
+@media screen and (max-width: 768px) {
+  .homeblock .homeblockus__top .homeblockus__subtitle {
+    padding: 0rem 2rem; } }
+
 @media screen and (max-width: 576px) {
   .homeblock {
     margin: 2rem 0rem; }
+    .homeblock .homeblockus__top .homeblockus__subtitle {
+      padding: 0rem; }
   .homeblockus-bottom {
     margin-bottom: 0rem; }
     .homeblockus-bottom .homeblockus__card {
@@ -1378,7 +1347,7 @@ a:visited, a:link {
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.15);
     padding: 1rem 0rem;
-    margin: 1rem 0rem;
+    margin: 0rem;
     font-family: "Oswald", sans-serif;
     font-size: 2rem;
     text-shadow: 4px 4px 4px #141414;
@@ -1390,13 +1359,11 @@ a:visited, a:link {
     @media screen and (max-width: 992px) {
       .homeblockproducts__top .homeblockproducts__title {
         padding: 0.75rem 0rem;
-        margin: 0.75rem 0rem;
         font-size: 1.5rem;
         letter-spacing: 0.3rem; } }
     @media screen and (max-width: 576px) {
       .homeblockproducts__top .homeblockproducts__title {
         padding: 0.5rem 0rem;
-        margin: 0.5rem 0rem;
         font-size: 1.4rem;
         letter-spacing: 0.2rem; } }
 
@@ -1494,7 +1461,7 @@ footer {
     footer .footerblock .footerblock__info .footerblock__info__text {
       font-size: 1rem;
       color: white;
-      font-family: 'Ubuntu', sans-serif; }
+      font-family: "Ubuntu", sans-serif; }
     footer .footerblock .footerblock__info .footerblock__info__icons {
       justify-content: center;
       margin: 0rem;
@@ -1572,7 +1539,7 @@ footer {
           font-size: 1.2rem;
           padding: 1rem 1.5rem;
           font-weight: 700;
-          font-family: "Open sans", sans-serif;
+          font-family: "Ubuntu", sans-serif;
           color: white; }
       footer .footerblock .footerblock__info .footerblock__info__contact a:hover {
         background-color: #ecf0f1; }
@@ -1585,7 +1552,7 @@ footer {
       footer .footerblock .copyright .copyright__text {
         font-size: 0.7rem;
         color: white;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: "Ubuntu", sans-serif;
         margin: 0px; }
 
 @media screen and (max-width: 992px) {

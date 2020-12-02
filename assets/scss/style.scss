@@ -54,7 +54,7 @@ a:visited, a:link{
         align-content: center;
         padding: 0rem 0.75rem;
         .navinfo__items__text{
-            font-family: 'Ubuntu';
+            font-family: $font-family-secondary;
             color: $lightgrey;
             font-size: 0.9rem;
             font-weight: 500;
@@ -134,7 +134,7 @@ a:visited, a:link{
             justify-content: flex-end;
             .navbar-nav{
                 .navmenu__bar__link{
-                    @include format-text ('Ubuntu', 1.15rem);
+                    @include format-text ($font-family-secondary, 1.15rem);
                     color: white;
                     font-weight: 500;
                     margin: 0.25rem;
@@ -177,7 +177,7 @@ a:visited, a:link{
                 .nav-link.active{
                     color: #fff;
                     font-weight: 500;
-                    @include format-text ('Ubuntu', 1.2rem);
+                    @include format-text ($font-family-secondary, 1.2rem);
                 }
             }
         }
@@ -252,7 +252,7 @@ a:visited, a:link{
         left: 10%;
     }
     .home-video-title{
-        @include format-text('Ubuntu', 4rem);
+        @include format-text($font-family-secondary, 4rem);
         font-weight: 600;
         color: white;
         margin: 0rem;
@@ -267,7 +267,7 @@ a:visited, a:link{
             margin: -3rem auto 0rem auto;
         }
         .home-video-title{
-            @include format-text('Ubuntu', 3rem);
+            @include format-text($font-family-secondary, 3rem);
         }
     }
 }
@@ -277,7 +277,7 @@ a:visited, a:link{
             margin: -2rem auto 0rem auto;
         }
         .home-video-title{
-            @include format-text('Ubuntu', 2.5rem);
+            @include format-text($font-family-secondary, 2.5rem);
         }
     }
 }
@@ -295,7 +295,7 @@ a:visited, a:link{
             left: 10%;
         }
         .home-video-title{
-            @include format-text('Ubuntu', 1.75rem);
+            @include format-text($font-family-secondary, 1.75rem);
         }
     }
 }
@@ -304,7 +304,7 @@ a:visited, a:link{
 .homeblock{
     border: 2px solid rgba($lightgrey, 0.8);
     border-radius: 5px;
-    padding: 1rem 0rem 0rem 0rem;
+    padding: 0rem;
     margin: 3rem 0rem;
     justify-content: center;
     .homeblockus__top{
@@ -314,10 +314,11 @@ a:visited, a:link{
         }
         .homeblockus__subtitle{
             @include block-subtitles();
+            padding: 0rem 10rem;
+            font-variant: small-caps;
         }
     }
 }
-
 .homeblockus-bottom{
     margin-bottom: 1.5rem;
     .homeblockus__card{
@@ -337,7 +338,6 @@ a:visited, a:link{
             .homeblockus__card__body__title{
                 text-transform: uppercase;
                 margin: 0px;
-                font-family: 'Poppins', sans-serif;
                 font-weight: 800;
                 font-size: 1.2rem;
                 letter-spacing: map-get($map: $letter-spacings, $key: small)
@@ -350,7 +350,6 @@ a:visited, a:link{
         }
     }
 }
-
 @media screen and (min-width: 1200px){
     .homeblockus-bottom{
         .homeblockus__card{
@@ -359,6 +358,13 @@ a:visited, a:link{
     }
 }
 @media screen and (max-width: 992px){
+    .homeblock{
+        .homeblockus__top{
+            .homeblockus__subtitle{
+                padding: 0rem 4rem;
+            }
+        }
+    }
     .homeblockus-bottom{
         .homeblockus__card{
             .homeblockus__card__body{
@@ -372,9 +378,23 @@ a:visited, a:link{
         }
     }  
 }
+@media screen and (max-width: 768px){
+    .homeblock{
+        .homeblockus__top{
+            .homeblockus__subtitle{
+                padding: 0rem 2rem;
+            }
+        }
+    }
+}
 @media screen and (max-width: 576px){
     .homeblock{
         margin: 2rem 0rem;
+        .homeblockus__top{
+            .homeblockus__subtitle{
+                padding: 0rem;
+            }
+        }
     }
     .homeblockus-bottom{
         margin-bottom: 0rem;
@@ -574,7 +594,7 @@ footer{
             .footerblock__info__text{
                 font-size: 1rem;
                 color: white;
-                font-family: 'Ubuntu', sans-serif;
+                font-family: $font-family-secondary;
             }
             .footerblock__info__icons{
                 justify-content: center;
@@ -621,7 +641,7 @@ footer{
             .copyright__text{
                 font-size: 0.7rem;
                 color: white;
-                font-family: 'Ubuntu', sans-serif;
+                font-family: $font-family-secondary;
                 margin: 0px;
             }
         }

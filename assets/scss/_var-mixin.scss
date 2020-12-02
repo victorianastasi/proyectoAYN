@@ -21,7 +21,7 @@ $bg-lightwhite: rgba(white, 0.15);
 
 /*font-family*/
 $font-family-primary: 'Oswald', sans-serif;
-$font-family-secondary: 'Open sans', sans-serif;
+$font-family-secondary: 'Ubuntu', sans-serif;
 $font-family-body: 'Lato', sans-serif;
 
 /*maps*/
@@ -66,7 +66,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         box-shadow: 0px 0px 10px $yellow;
     }
     50%{
-        box-shadow: 0px 0px 20px $yellow;
+        box-shadow: 0px 0px 25px $yellow;
     }
     100%{
         box-shadow: 0px 0px 10px $yellow;
@@ -78,7 +78,6 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     font-weight: 300;
     font-size: 1rem;
 }
-
 @mixin format-text ($font-family, $font-size) {
     font-family: $font-family;
     font-size: $font-size;
@@ -192,7 +191,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     justify-content: center;
     background-color: $bg-lightwhite;
     padding: 1rem 0rem;
-    margin: 1rem 0rem;
+    margin: 0rem;
     @include format-text($font-family-primary, map-get($map: $font-sizes, $key: xx-large));
     text-shadow: 4px 4px 4px $dark20;
     text-align: center;
@@ -202,30 +201,61 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     letter-spacing: map-get($map: $letter-spacings, $key: large);
     @media screen and (max-width: 992px){
         padding: 0.75rem 0rem;
-        margin: 0.75rem 0rem;
         font-size: map-get($map: $font-sizes, $key: x-large);
         letter-spacing: map-get($map: $letter-spacings, $key: medium);
     }
     @media screen and (max-width: 576px){
         padding: 0.5rem 0rem;
-        margin: 0.5rem 0rem;
         font-size: 1.4rem;
         letter-spacing: map-get($map: $letter-spacings, $key: small);
     }
 }
-@mixin block-subtitles () {
-    @include format-text($font-family-primary, map-get($map: $font-sizes, $key: x-large));
+@mixin block-subtitles (){
+    @include format-text($font-family-secondary, 1.3rem);
     @include text-shadow-grey();
     font-weight: 400;
-    letter-spacing: map-get($map: $letter-spacings, $key: medium);
+    color: white;
+    letter-spacing: map-get($map: $letter-spacings, $key: small);
     margin: 0.5rem 0rem 0rem 0rem;
     @media screen and (max-width: 992px){
-        @include format-text($font-family-primary, map-get($map: $font-sizes, $key: large));
-        letter-spacing: map-get($map: $letter-spacings, $key: small);
+        @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: medium));
+        letter-spacing: map-get($map: $letter-spacings, $key: x-small);
     }
     @media screen and (max-width: 576px){
-        @include format-text($font-family-primary, map-get($map: $font-sizes, $key: large));
-        letter-spacing: map-get($map: $letter-spacings, $key: x-small);
+        @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: small));
+        letter-spacing: 0px;
+    }
+}
+@mixin block-title-underline(){
+    justify-content: center;
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: xx-large));
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: map-get($map: $letter-spacings, $key: medium);
+    background-image: linear-gradient(yellow, #f8d505);
+    background-size: 70% 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+    &:hover{
+        background-size: 100% 2px, auto;
+    }
+    @media screen and (max-width: 992px){
+        padding: 0.75rem 0rem;
+        margin: 0.75rem 0rem;
+        @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: x-large));
+        letter-spacing: map-get($map: $letter-spacings, $key: medium);
+    }
+    @media screen and (max-width: 576px){
+        padding: 0.5rem 0rem;
+        margin: 0.5rem 0rem;
+        @include format-text($font-family-secondary, 1.4rem);
+        letter-spacing: map-get($map: $letter-spacings, $key: small);
     }
 }
 @mixin highlight(){
@@ -236,7 +266,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     background-color: $bg-lightwhite;
     padding: 1rem 0rem;
     margin: 1rem 0rem 0rem 0rem;
-    font-family: 'Ubunto', sans-serif;
+    font-family: $font-family-secondary;
     font-size: 1.8rem;
     text-shadow: 4px 4px 2px $dark20;
     text-align: center;

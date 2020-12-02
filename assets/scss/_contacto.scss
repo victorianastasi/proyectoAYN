@@ -114,7 +114,7 @@
             legend{
                 width: inherit;
                 margin: 0rem auto;
-                @include format-text ('Ubuntu', map-get($map: $font-sizes, $key: x-large));
+                @include format-text ($font-family-secondary, map-get($map: $font-sizes, $key: x-large));
                 font-weight: 600;
                 font-variant: small-caps;
                 letter-spacing: map-get($map: $letter-spacings, $key: medium);
@@ -124,7 +124,7 @@
                 p{
                     padding: 0rem;
                     margin: 0;
-                    font-family: 'Ubuntu', sans-serif;
+                    font-family: $font-family-secondary;
                 }
                 .small-text{
                     font-size: 0.8rem;
@@ -193,7 +193,7 @@
                 .button__form{
                     background-color: rgba(#f8d505, 0.90);
                     color: black;
-                    @include format-text ('Ubuntu', map-get($map: $font-sizes, $key: medium));
+                    @include format-text ($font-family-secondary, map-get($map: $font-sizes, $key: medium));
                     border: 2px solid white;
                     box-shadow: 0px 5px 5px $dark10;
                     margin: 0rem 1rem;
