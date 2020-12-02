@@ -73,9 +73,9 @@
     .contact__info{
             padding: 1rem 0rem;
             animation-name: animation-box;
-            animation-timing-function: linear;
+            animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
-            animation-duration: 2.5s;
+            animation-duration: 3.5s;
         .contact__info__text{
             font-size: 14px;
             word-spacing: 0rem;
