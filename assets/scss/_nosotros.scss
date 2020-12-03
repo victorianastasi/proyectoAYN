@@ -145,7 +145,7 @@
                 }
             }
             .card-body{
-                font-size: 14px;
+                font-size: map-get($map: $font-sizes, $key: x-small);
             }
         }   
     }
@@ -169,7 +169,8 @@
                 }
             }
             .card-body{
-                font-size: 14px;
+                font-size: map-get($map: $font-sizes, $key: x-small);
+                padding: 0.5rem 0.75rem 1.25rem 0.75rem;
             }
         }   
     }

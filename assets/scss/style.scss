@@ -56,7 +56,7 @@ a:visited, a:link{
         .navinfo__items__text{
             font-family: $font-family-secondary;
             color: $lightgrey;
-            font-size: 0.9rem;
+            font-size: map-get($map: $font-sizes, $key: small);
             font-weight: 500;
             word-spacing: 10px;
             margin: 0rem;
@@ -77,7 +77,7 @@ a:visited, a:link{
         z-index: -1;
         .navinfo__items{
             .navinfo__items__text{
-                font-size: 0.8rem;
+                font-size: map-get($map: $font-sizes, $key: x-small);
             }
         }
     }
@@ -91,7 +91,7 @@ a:visited, a:link{
     .navinfo{
         .navinfo__items{
             .navinfo__items__text{
-                font-size: 0.8rem;
+                font-size: map-get($map: $font-sizes, $key: x-small);
                 padding: 0rem 0;
             }
         }
@@ -107,8 +107,6 @@ a:visited, a:link{
         }
     }
 }
-
-
 /*Navbar MENU*/
 .navmenu{
     background-color: rgba($dark10, 0.6);
@@ -260,7 +258,6 @@ a:visited, a:link{
         text-shadow: 5px 5px 5px $grey-dark;
     }
 }
-
 @media screen and (max-width: 992px){
     .video{
         .home-video{
@@ -339,11 +336,11 @@ a:visited, a:link{
                 text-transform: uppercase;
                 margin: 0px;
                 font-weight: 800;
-                font-size: 1.2rem;
+                font-size: map-get($map: $font-sizes, $key: large);
                 letter-spacing: map-get($map: $letter-spacings, $key: small)
             }
             .homeblockus__card__body__text{
-                font-size: 1rem;
+                font-size: map-get($map: $font-sizes, $key: medium);
                 color: white;
                 letter-spacing: map-get($map: $letter-spacings, $key: x-small);
             }
@@ -412,7 +409,7 @@ a:visited, a:link{
                 }
                 .homeblockus__card__body__text{
                     letter-spacing: 0px;
-                    font-size: 14px;
+                    font-size: map-get($map: $font-sizes, $key: x-small);
                 }
             }
         }
@@ -460,7 +457,7 @@ a:visited, a:link{
             justify-content: space-evenly;
             .boton__text, .boton__icon{
                 color: $dark10;
-                font-size: 16px;
+                font-size: map-get($map: $font-sizes, $key: small);
             }
         }
         .boton:active{
@@ -489,7 +486,7 @@ a:visited, a:link{
     }
     .homeblockproducts__box{
         .homeblockproducts__box__text{
-            font-size: 1rem;
+            font-size: map-get($map: $font-sizes, $key: medium);
             padding: 1rem 1.5rem;
             color: white;
             letter-spacing: map-get($map: $letter-spacings, $key: x-small);
@@ -501,7 +498,7 @@ a:visited, a:link{
         padding: 1rem 0rem 2rem 0rem;
         .homeblockproducts__box{
             .homeblockproducts__box__text{
-                font-size: 0.9rem;
+                font-size: map-get($map: $font-sizes, $key: small);
                 padding: 0.5rem 0rem;
                 margin: 0px;
             }
@@ -519,7 +516,7 @@ a:visited, a:link{
             margin-top: 1rem;
             .homeblockproducts__box__text{
                 letter-spacing: 0px;
-                font-size: 14px;
+                font-size: map-get($map: $font-sizes, $key: x-small);
             }
         }
     }
@@ -592,7 +589,7 @@ footer{
         justify-content: center;
         .footerblock__info{
             .footerblock__info__text{
-                font-size: 1rem;
+                font-size: map-get($map: $font-sizes, $key: medium);
                 color: white;
                 font-family: $font-family-secondary;
             }
@@ -701,7 +698,7 @@ footer{
         .footerblock{
             .footerblock__info{
                 .footerblock__info__text{
-                    font-size: 0.8rem;
+                    font-size: map-get($map: $font-sizes, $key: x-small);
                     margin-bottom: 0.5rem;
                 }
                 .footerblock__info__icons{

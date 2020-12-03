@@ -6,6 +6,7 @@ $dark20transparent90: rgba(20, 20, 20, 0.9);
 $lightgrey: rgb(236, 240, 241);
 $mediumgrey: rgb(206, 206, 206);
 $yellow: rgb(248, 232, 5);
+$yellow-logo: rgb(248, 213, 5);
 $yellowlight: rgb(255, 246, 121);
 $dark41: rgb(41, 41, 41);
 $grey-dark: rgb(25, 25, 25);
@@ -70,6 +71,24 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     }
     100%{
         box-shadow: 0px 0px 10px $yellow;
+    }
+}
+@keyframes size-icon{
+    0%{
+        transform: scale(1.5,1.5);
+        margin: 2rem 0rem;
+        text-shadow: 0 0 25px $mediumgrey;
+    }
+    50%{
+        transform: scale(2.5,2.5);
+        transform: rotateY(180deg);
+        margin: 1rem 0rem;
+        text-shadow: 0 0 15px $mediumgrey;
+    }
+    100%{
+        transform: scale(1.5,1.5);
+        margin: 2rem 0rem;
+        text-shadow: 0 0 25px $mediumgrey;
     }
 }
 /*mixins*/
@@ -237,7 +256,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: map-get($map: $letter-spacings, $key: medium);
-    background-image: linear-gradient(yellow, #f8d505);
+    background-image: linear-gradient($yellow, $yellow-logo);
     background-size: 70% 2px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -272,7 +291,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     text-align: center;
     color: white;
     font-weight: 600;
-    letter-spacing: 5px;
+    letter-spacing:  map-get($map: $letter-spacings, $key: medium);
     text-transform: uppercase;
     &:first-letter{
         color: $yellow;
@@ -285,7 +304,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     @media screen and (max-width: 576px){
         padding: 0.5rem 0rem;
         margin: 2.5rem 0 0rem 0rem;
-        letter-spacing: 2px;
+        letter-spacing:  map-get($map: $letter-spacings, $key: x-small);
         font-size: 1.3rem;
     }
 }
