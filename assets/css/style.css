@@ -17,14 +17,11 @@
 
 @keyframes bg-cards {
   0% {
-    background-color: rgba(0, 0, 0, 0.9);
-    box-shadow: 0px 0px 25px white; }
+    background-color: rgba(236, 240, 241, 0.9); }
   50% {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 15px white; }
+    background-color: rgba(236, 240, 241, 0.3); }
   100% {
-    background-color: rgba(34, 34, 59, 0.2);
-    box-shadow: 0px 0px 5px white; } }
+    background-color: rgba(34, 34, 59, 0.2); } }
 
 @keyframes animation-box {
   0% {
@@ -48,6 +45,14 @@
     transform: scale(1.5, 1.5);
     margin: 2rem 0rem;
     text-shadow: 0 0 25px #cecece; } }
+
+@keyframes news-block {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
 
 /*mixins*/
 /*titulos de secciones de la web*/
@@ -541,117 +546,120 @@
     .news__title {
       font-size: 1.75rem; } }
 
-.news__box {
-  padding: 0rem;
-  text-align: center; }
-  .news__box .news__box__title {
+.news__animation__block {
+  animation-name: news-block;
+  animation-duration: 2s;
+  animation-timing-function: ease-in; }
+  .news__animation__block .news__box {
+    padding: 0rem;
+    text-align: center; }
+    .news__animation__block .news__box .news__box__title {
+      justify-content: center;
+      padding: 1rem 0rem;
+      margin: 1rem 0rem;
+      text-shadow: 2px 2px 4px black;
+      display: inline-block;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 2rem;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      background-image: linear-gradient(#f8e805, #f8d505);
+      background-size: 70% 2px, auto;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      transition: all .2s ease-out; }
+      .news__animation__block .news__box .news__box__title:hover {
+        background-size: 100% 2px, auto; }
+      @media screen and (max-width: 992px) {
+        .news__animation__block .news__box .news__box__title {
+          padding: 0.75rem 0rem;
+          margin: 0.75rem 0rem;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 1.5rem;
+          letter-spacing: 0.3rem; } }
+      @media screen and (max-width: 576px) {
+        .news__animation__block .news__box .news__box__title {
+          padding: 0.5rem 0rem;
+          margin: 0.5rem 0rem;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 1.4rem;
+          letter-spacing: 0.2rem; } }
+      .news__animation__block .news__box .news__box__title .resaltar {
+        color: #f8e805; }
+  .news__animation__block .news__block {
     justify-content: center;
-    padding: 1rem 0rem;
-    margin: 1rem 0rem;
-    text-shadow: 2px 2px 4px black;
-    display: inline-block;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 2rem;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    background-image: linear-gradient(#f8e805, #f8d505);
-    background-size: 70% 2px, auto;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    transition: all .2s ease-out; }
-    .news__box .news__box__title:hover {
-      background-size: 100% 2px, auto; }
-    @media screen and (max-width: 992px) {
-      .news__box .news__box__title {
-        padding: 0.75rem 0rem;
-        margin: 0.75rem 0rem;
-        font-family: "Ubuntu", sans-serif;
+    align-items: center;
+    background-color: rgba(34, 34, 59, 0.2);
+    box-shadow: 0px 0px 10px white;
+    margin: 2rem 3rem;
+    padding: 0rem 2rem;
+    border-radius: 10px;
+    animation-name: bg-cards;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    box-shadow: 0px 0px 5px white, 0 0 0 2000px rgba(0, 0, 0, 0); }
+    .news__animation__block .news__block .news__block__text {
+      text-align: center;
+      padding: 2rem;
+      box-shadow: -5px -5px 1px rgba(248, 232, 5, 0.75); }
+      .news__animation__block .news__block .news__block__text h6 {
+        font-family: "Oswald", sans-serif;
         font-size: 1.5rem;
-        letter-spacing: 0.3rem; } }
-    @media screen and (max-width: 576px) {
-      .news__box .news__box__title {
-        padding: 0.5rem 0rem;
-        margin: 0.5rem 0rem;
-        font-family: "Ubuntu", sans-serif;
-        font-size: 1.4rem;
-        letter-spacing: 0.2rem; } }
-    .news__box .news__box__title .resaltar {
-      color: #f8e805; }
-
-.news__block {
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(34, 34, 59, 0.2);
-  box-shadow: 0px 0px 5px white;
-  margin: 2rem 3rem;
-  padding: 0rem 2rem;
-  border-radius: 10px;
-  animation-name: bg-cards;
-  animation-duration: 1.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  box-shadow: 0px 0px 5px white, 0 0 0 2000px rgba(0, 0, 0, 0); }
-  .news__block .news__block__text {
-    text-align: center;
-    padding: 2rem;
-    box-shadow: -5px -5px 1px rgba(248, 232, 5, 0.75); }
-    .news__block .news__block__text h6 {
-      font-family: "Oswald", sans-serif;
-      font-size: 1.5rem;
-      color: #ecf0f1;
-      letter-spacing: 0.2rem; }
-  .news__block .news__block__img {
-    display: flex;
-    justify-content: center; }
-    .news__block .news__block__img img {
-      width: 60%;
-      border-radius: 10px;
-      opacity: 0.9;
-      transition: all 0.5s; }
-    .news__block .news__block__img img:hover {
-      filter: brightness(110%);
-      opacity: 1; }
-  .news__block:hover {
-    box-shadow: 0px 0px 5px white, 0 0 0 2000px rgba(206, 206, 206, 0.2); }
+        color: #ecf0f1;
+        letter-spacing: 0.2rem; }
+    .news__animation__block .news__block .news__block__img {
+      display: flex;
+      justify-content: center; }
+      .news__animation__block .news__block .news__block__img img {
+        width: 60%;
+        border-radius: 10px;
+        opacity: 0.9;
+        transition: all 0.5s; }
+      .news__animation__block .news__block .news__block__img img:hover {
+        filter: brightness(110%);
+        opacity: 1; }
+    .news__animation__block .news__block:hover {
+      box-shadow: 0px 0px 5px white, 0 0 0 2000px rgba(206, 206, 206, 0.2); }
 
 @media screen and (max-width: 992px) {
-  .news__block {
+  .news__animation__block .news__block {
     padding: 1rem 1rem; }
-    .news__block .news__block__text h6 {
+    .news__animation__block .news__block .news__block__text h6 {
       font-size: 1.35rem; }
-    .news__block .news__block__img img {
+    .news__animation__block .news__block .news__block__img img {
       width: 100%;
       transform: scale(1, 1); } }
 
 @media screen and (max-width: 768px) {
-  .news__block {
+  .news__animation__block .news__block {
     margin: 2rem 1rem;
     padding: 1rem 1rem; }
-    .news__block .news__block__text {
+    .news__animation__block .news__block .news__block__text {
       padding: 1.5rem; }
-      .news__block .news__block__text h6 {
+      .news__animation__block .news__block .news__block__text h6 {
         font-size: 1.35rem; }
-    .news__block .news__block__img img {
+    .news__animation__block .news__block .news__block__img img {
       width: 90%;
       transform: scale(1.1, 1.1); }
-    .news__block:hover {
+    .news__animation__block .news__block:hover {
       box-shadow: 0px 0px 5px white; } }
 
 @media screen and (max-width: 576px) {
-  .news__block {
+  .news__animation__block .news__block {
     margin: 2rem 0rem;
     padding: 1rem 1rem; }
-    .news__block .news__block__text {
+    .news__animation__block .news__block .news__block__text {
       padding: 1rem; }
-      .news__block .news__block__text h6 {
+      .news__animation__block .news__block .news__block__text h6 {
         font-size: 1.3rem;
         letter-spacing: 0.1rem; }
-    .news__block .news__block__img img {
+    .news__animation__block .news__block .news__block__img img {
       width: 100%;
       transform: scale(1, 1); }
-    .news__block:hover {
+    .news__animation__block .news__block:hover {
       box-shadow: 0px 0px 5px white; } }
 
 /*contacto.html*/

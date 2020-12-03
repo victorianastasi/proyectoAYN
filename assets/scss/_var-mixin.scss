@@ -50,16 +50,13 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 @keyframes bg-cards {
     0% {
-        background-color: rgba(black, 0.9);
-        box-shadow: 0px 0px 25px white;
+        background-color: rgba($lightgrey, 0.9);
     }
     50%{
-        background-color: rgba(black, 0.5);
-        box-shadow: 0px 0px 15px white;
+        background-color: rgba($lightgrey, 0.3);
     }
     100%{
         background-color: rgba($deep-blue, 0.2);
-        box-shadow: 0px 0px 5px white;
     }
 }
 @keyframes animation-box{
@@ -89,6 +86,17 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         transform: scale(1.5,1.5);
         margin: 2rem 0rem;
         text-shadow: 0 0 25px $mediumgrey;
+    }
+}
+@keyframes news-block{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
     }
 }
 /*mixins*/
