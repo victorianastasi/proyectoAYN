@@ -83,7 +83,7 @@
           font-size: 1.75rem; } }
     .us-principal-container .us-principal-container__text .us-principal-container__text__subtitle {
       font-family: "Ubuntu", sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       text-shadow: 2px 2px 4px #cecece;
       font-weight: 400;
       color: white;
@@ -92,12 +92,12 @@
       @media screen and (max-width: 992px) {
         .us-principal-container .us-principal-container__text .us-principal-container__text__subtitle {
           font-family: "Ubuntu", sans-serif;
-          font-size: 1rem;
+          font-size: 1.3rem;
           letter-spacing: 0.1rem; } }
       @media screen and (max-width: 576px) {
         .us-principal-container .us-principal-container__text .us-principal-container__text__subtitle {
           font-family: "Ubuntu", sans-serif;
-          font-size: 0.9rem;
+          font-size: 1.2rem;
           letter-spacing: 0px; } }
   .us-principal-container .us-principal-container__img {
     display: flex;
@@ -1266,7 +1266,7 @@ a:visited, a:link {
           letter-spacing: 0.2rem; } }
     .homeblock .homeblockus__top .homeblockus__subtitle {
       font-family: "Ubuntu", sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       text-shadow: 2px 2px 4px #cecece;
       font-weight: 400;
       color: white;
@@ -1277,12 +1277,12 @@ a:visited, a:link {
       @media screen and (max-width: 992px) {
         .homeblock .homeblockus__top .homeblockus__subtitle {
           font-family: "Ubuntu", sans-serif;
-          font-size: 1rem;
+          font-size: 1.3rem;
           letter-spacing: 0.1rem; } }
       @media screen and (max-width: 576px) {
         .homeblock .homeblockus__top .homeblockus__subtitle {
           font-family: "Ubuntu", sans-serif;
-          font-size: 0.9rem;
+          font-size: 1.2rem;
           letter-spacing: 0px; } }
 
 .homeblockus-bottom {

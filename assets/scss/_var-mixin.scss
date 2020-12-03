@@ -238,18 +238,18 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     }
 }
 @mixin block-subtitles (){
-    @include format-text($font-family-secondary, 1.3rem);
+    @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: x-large));
     @include text-shadow-grey();
     font-weight: 400;
     color: white;
     letter-spacing: map-get($map: $letter-spacings, $key: small);
     margin: 0.5rem 0rem 0rem 0rem;
     @media screen and (max-width: 992px){
-        @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: medium));
+        @include format-text($font-family-secondary, 1.3rem);
         letter-spacing: map-get($map: $letter-spacings, $key: x-small);
     }
     @media screen and (max-width: 576px){
-        @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: small));
+        @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: large));
         letter-spacing: 0px;
     }
 }
