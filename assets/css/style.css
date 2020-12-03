@@ -810,7 +810,8 @@
     font-size: 5rem;
     margin: 2rem 0rem;
     animation-name: size-icon;
-    animation-duration: 4s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite; }
 
 @media screen and (max-width: 992px) {
@@ -819,9 +820,7 @@
 
 @media screen and (max-width: 576px) {
   .contact-draw {
-    margin: 1.5rem 0rem 0.5rem 0rem; }
-    .contact-draw i {
-      font-size: 3.5rem; } }
+    margin: 1.5rem 0rem 0.5rem 0rem; } }
 
 /*FORMULARIO DE CONTACTO*/
 .contact-form {
