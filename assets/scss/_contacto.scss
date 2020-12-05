@@ -188,7 +188,7 @@
                 }
                 .form-group__input:focus{
                     padding: 0.6rem 0rem;
-                    background-color: rgba($lightgrey, 0.7);
+                    background-color: $lightgrey;
                     border-bottom: 1px solid white;
                     color: black;
                     font-weight: 700;
@@ -218,7 +218,7 @@
                 }
                 .form-group__textarea__textarea:focus{
                     padding: 0.5rem 0rem;
-                    background-color: rgba($lightgrey, 0.7);
+                    background-color: $lightgrey;
                     border-bottom: 1px solid white;
                     color: black;
                     font-weight: 700;

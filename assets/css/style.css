@@ -892,7 +892,7 @@
           transition: all 0.5s; }
         .contact-form form fieldset .form-group .form-group__input:focus, .contact-form form fieldset .form-group__buttons .form-group__input:focus {
           padding: 0.6rem 0rem;
-          background-color: rgba(236, 240, 241, 0.7);
+          background-color: #ecf0f1;
           border-bottom: 1px solid white;
           color: black;
           font-weight: 700;
@@ -918,7 +918,7 @@
           transition: all 0.5s; }
         .contact-form form fieldset .form-group__textarea .form-group__textarea__textarea:focus {
           padding: 0.5rem 0rem;
-          background-color: rgba(236, 240, 241, 0.7);
+          background-color: #ecf0f1;
           border-bottom: 1px solid white;
           color: black;
           font-weight: 700;
