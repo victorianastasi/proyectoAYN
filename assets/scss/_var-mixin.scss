@@ -2,15 +2,14 @@
 /*COLORS*/
 $dark10: rgb(10, 10, 10);
 $dark20: rgb(20, 20, 20);
-$dark20transparent90: rgba(20, 20, 20, 0.9);
+$dark41: rgb(41, 41, 41);
 $lightgrey: rgb(236, 240, 241);
 $mediumgrey: rgb(206, 206, 206);
+$grey: rgb(117, 116, 116);
+$darkgrey: rgb(25, 25, 25);
 $yellow: rgb(248, 232, 5);
 $yellow-logo: rgb(248, 213, 5);
 $yellowlight: rgb(255, 246, 121);
-$dark41: rgb(41, 41, 41);
-$grey-dark: rgb(25, 25, 25);
-$grey-light: rgb(117, 116, 116);
 $dark-blue: rgb(41, 41, 71);
 $deep-blue: rgb(34, 34, 59);
 $purple: rgb(122, 95, 255);
@@ -113,7 +112,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     box-shadow: 0px 0px 10px white;
 }
 @mixin text-shadow-grey () {
-    text-shadow: 2px 2px 4px $mediumgrey;
+    text-shadow: 2px 2px 4px $grey;
 }
 @mixin margin-titles(){
     margin: 1rem 0rem 1.5rem 0rem;
@@ -197,8 +196,8 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         }
     }
 }
+/*titulos de secciones de la web*/
 @mixin principal-title(){
-    background-image: linear-gradient(to right, rgb(236, 240, 241), rgba(0,0,0, 0.5));
     color: white;
     font-weight: 800;
     text-transform: uppercase;
@@ -213,10 +212,8 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         font-size: 1.75rem;
     }
 }
-/*titulos de secciones de la web*/
 @mixin block-titles(){
     justify-content: center;
-    background-color: $bg-lightwhite;
     padding: 1rem 0rem;
     margin: 0rem;
     @include format-text($font-family-primary, map-get($map: $font-sizes, $key: xx-large));
@@ -249,7 +246,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         letter-spacing: map-get($map: $letter-spacings, $key: x-small);
     }
     @media screen and (max-width: 576px){
-        @include format-text($font-family-secondary, map-get($map: $font-sizes, $key: large));
+        @include format-text($font-family-secondary, 1.1rem);
         letter-spacing: 0px;
     }
 }
@@ -285,14 +282,28 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         letter-spacing: map-get($map: $letter-spacings, $key: small);
     }
 }
+@mixin block-title-underline-white(){
+    @include block-title-underline();
+    background-image: linear-gradient(white, $lightgrey);
+    background-size: 60% 2.5px, auto;
+    &:hover{
+        background-size: 100% 2.5px, auto;
+    }
+    @media screen and (max-width: 992px){
+        background-size: 60% 2px, auto;
+        &:hover{
+            background-size: 100% 2px, auto;
+        }
+    }
+}
 @mixin highlight(){
     color: $yellow;
 }
 @mixin carousel-titles(){
     justify-content: center;
-    background-color: $bg-lightwhite;
+    display: inline-block;
     padding: 1rem 0rem;
-    margin: 4rem 0 0.25rem 0rem;
+    margin: 4rem 0 1rem 0rem;
     font-family: $font-family-secondary;
     font-size: 1.8rem;
     text-shadow: 4px 4px 2px $dark20;
@@ -301,18 +312,26 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     font-weight: 600;
     letter-spacing:  map-get($map: $letter-spacings, $key: medium);
     text-transform: uppercase;
+    background-image: linear-gradient($yellow, $yellow-logo);
+    background-size: 70% 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+    &:hover{
+        background-size: 100% 2px, auto;
+    }
     &:first-letter{
         color: $yellow;
     }
     @media screen and (max-width: 992px){
         padding: 0.75rem 0rem;
-        margin: 3rem 0 0.25rem 0rem;
+        margin: 3rem 0 0.75rem 0rem;
         font-size: map-get($map: $font-sizes, $key: x-large);
     }
     @media screen and (max-width: 576px){
         padding: 0.5rem 0rem;
-        margin: 2.5rem 0 0rem 0rem;
-        letter-spacing:  map-get($map: $letter-spacings, $key: x-small);
+        margin: 2.5rem 0 0.5rem 0rem;
+        letter-spacing: map-get($map: $letter-spacings, $key: x-small);
         font-size: 1.3rem;
     }
 }

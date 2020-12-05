@@ -66,7 +66,6 @@
   .us-principal-container .us-principal-container__text {
     margin: 1rem 0rem; }
     .us-principal-container .us-principal-container__text .us-principal-container__text__title {
-      background-image: linear-gradient(to right, #ecf0f1, rgba(0, 0, 0, 0.5));
       color: white;
       font-weight: 800;
       text-transform: uppercase;
@@ -84,7 +83,7 @@
     .us-principal-container .us-principal-container__text .us-principal-container__text__subtitle {
       font-family: "Ubuntu", sans-serif;
       font-size: 1.5rem;
-      text-shadow: 2px 2px 4px #cecece;
+      text-shadow: 2px 2px 4px #757474;
       font-weight: 400;
       color: white;
       letter-spacing: 0.2rem;
@@ -97,7 +96,7 @@
       @media screen and (max-width: 576px) {
         .us-principal-container .us-principal-container__text .us-principal-container__text__subtitle {
           font-family: "Ubuntu", sans-serif;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           letter-spacing: 0px; } }
   .us-principal-container .us-principal-container__img {
     display: flex;
@@ -437,7 +436,6 @@
 /*productos.html*/
 /*TITULO E IMAGEN PRINCIPAL*/
 .products__title {
-  background-image: linear-gradient(to right, #ecf0f1, rgba(0, 0, 0, 0.5));
   color: white;
   font-weight: 800;
   text-transform: uppercase;
@@ -477,9 +475,9 @@
   text-align: center; }
   .carousel-title-box .carousel-title {
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.15);
+    display: inline-block;
     padding: 1rem 0rem;
-    margin: 4rem 0 0.25rem 0rem;
+    margin: 4rem 0 1rem 0rem;
     font-family: "Ubuntu", sans-serif;
     font-size: 1.8rem;
     text-shadow: 4px 4px 2px #141414;
@@ -487,18 +485,25 @@
     color: white;
     font-weight: 600;
     letter-spacing: 0.3rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    background-image: linear-gradient(#f8e805, #f8d505);
+    background-size: 70% 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out; }
+    .carousel-title-box .carousel-title:hover {
+      background-size: 100% 2px, auto; }
     .carousel-title-box .carousel-title:first-letter {
       color: #f8e805; }
     @media screen and (max-width: 992px) {
       .carousel-title-box .carousel-title {
         padding: 0.75rem 0rem;
-        margin: 3rem 0 0.25rem 0rem;
+        margin: 3rem 0 0.75rem 0rem;
         font-size: 1.5rem; } }
     @media screen and (max-width: 576px) {
       .carousel-title-box .carousel-title {
         padding: 0.5rem 0rem;
-        margin: 2.5rem 0 0rem 0rem;
+        margin: 2.5rem 0 0.5rem 0rem;
         letter-spacing: 0.1rem;
         font-size: 1.3rem; } }
     .carousel-title-box .carousel-title:first-letter {
@@ -529,7 +534,6 @@
 
 /*novedades.html*/
 .news__title {
-  background-image: linear-gradient(to right, #ecf0f1, rgba(0, 0, 0, 0.5));
   color: white;
   font-weight: 800;
   text-transform: uppercase;
@@ -664,7 +668,6 @@
 
 /*contacto.html*/
 .contact__title {
-  background-image: linear-gradient(to right, #ecf0f1, rgba(0, 0, 0, 0.5));
   color: white;
   font-weight: 800;
   text-transform: uppercase;
@@ -1059,6 +1062,7 @@ a:visited, a:link {
   font-weight: inherit; }
 
 .headerConImg {
+  background-color: #292929;
   background-image: url(../../img/luces.jpg);
   background-size: cover;
   backface-visibility: hidden; }
@@ -1262,34 +1266,54 @@ a:visited, a:link {
   margin: 3rem 0rem;
   justify-content: center; }
   .homeblock .homeblockus__top {
-    padding: 0rem; }
+    padding: 0rem;
+    text-align: center; }
     .homeblock .homeblockus__top .homeblockus__title {
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.15);
       padding: 1rem 0rem;
-      margin: 0rem;
-      font-family: "Oswald", sans-serif;
+      margin: 1rem 0rem;
+      text-shadow: 2px 2px 4px black;
+      display: inline-block;
+      font-family: "Ubuntu", sans-serif;
       font-size: 2rem;
-      text-shadow: 4px 4px 4px #141414;
-      text-align: center;
       color: white;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.5rem; }
+      letter-spacing: 0.3rem;
+      background-image: linear-gradient(#f8e805, #f8d505);
+      background-size: 70% 2px, auto;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      transition: all .2s ease-out;
+      background-image: linear-gradient(white, #ecf0f1);
+      background-size: 60% 2.5px, auto; }
+      .homeblock .homeblockus__top .homeblockus__title:hover {
+        background-size: 100% 2px, auto; }
       @media screen and (max-width: 992px) {
         .homeblock .homeblockus__top .homeblockus__title {
           padding: 0.75rem 0rem;
+          margin: 0.75rem 0rem;
+          font-family: "Ubuntu", sans-serif;
           font-size: 1.5rem;
           letter-spacing: 0.3rem; } }
       @media screen and (max-width: 576px) {
         .homeblock .homeblockus__top .homeblockus__title {
           padding: 0.5rem 0rem;
+          margin: 0.5rem 0rem;
+          font-family: "Ubuntu", sans-serif;
           font-size: 1.4rem;
           letter-spacing: 0.2rem; } }
+      .homeblock .homeblockus__top .homeblockus__title:hover {
+        background-size: 100% 2.5px, auto; }
+      @media screen and (max-width: 992px) {
+        .homeblock .homeblockus__top .homeblockus__title {
+          background-size: 60% 2px, auto; }
+          .homeblock .homeblockus__top .homeblockus__title:hover {
+            background-size: 100% 2px, auto; } }
     .homeblock .homeblockus__top .homeblockus__subtitle {
       font-family: "Ubuntu", sans-serif;
       font-size: 1.5rem;
-      text-shadow: 2px 2px 4px #cecece;
+      text-shadow: 2px 2px 4px #757474;
       font-weight: 400;
       color: white;
       letter-spacing: 0.2rem;
@@ -1304,7 +1328,7 @@ a:visited, a:link {
       @media screen and (max-width: 576px) {
         .homeblock .homeblockus__top .homeblockus__subtitle {
           font-family: "Ubuntu", sans-serif;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           letter-spacing: 0px; } }
 
 .homeblockus-bottom {
@@ -1352,7 +1376,7 @@ a:visited, a:link {
   .homeblock {
     margin: 2rem 0rem; }
     .homeblock .homeblockus__top .homeblockus__subtitle {
-      padding: 0rem; }
+      padding: 0rem 0.25rem; }
   .homeblockus-bottom {
     margin-bottom: 0rem; }
     .homeblockus-bottom .homeblockus__card {
@@ -1414,30 +1438,50 @@ a:visited, a:link {
 
 /*BLOQUE PRODUCTOS*/
 .homeblockproducts__top {
-  padding: 0rem; }
+  padding: 0rem;
+  text-align: center; }
   .homeblockproducts__top .homeblockproducts__title {
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.15);
     padding: 1rem 0rem;
-    margin: 0rem;
-    font-family: "Oswald", sans-serif;
+    margin: 1rem 0rem;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
     font-size: 2rem;
-    text-shadow: 4px 4px 4px #141414;
-    text-align: center;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5rem; }
+    letter-spacing: 0.3rem;
+    background-image: linear-gradient(#f8e805, #f8d505);
+    background-size: 70% 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+    background-image: linear-gradient(white, #ecf0f1);
+    background-size: 60% 2.5px, auto; }
+    .homeblockproducts__top .homeblockproducts__title:hover {
+      background-size: 100% 2px, auto; }
     @media screen and (max-width: 992px) {
       .homeblockproducts__top .homeblockproducts__title {
         padding: 0.75rem 0rem;
+        margin: 0.75rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.5rem;
         letter-spacing: 0.3rem; } }
     @media screen and (max-width: 576px) {
       .homeblockproducts__top .homeblockproducts__title {
         padding: 0.5rem 0rem;
+        margin: 0.5rem 0rem;
+        font-family: "Ubuntu", sans-serif;
         font-size: 1.4rem;
         letter-spacing: 0.2rem; } }
+    .homeblockproducts__top .homeblockproducts__title:hover {
+      background-size: 100% 2.5px, auto; }
+    @media screen and (max-width: 992px) {
+      .homeblockproducts__top .homeblockproducts__title {
+        background-size: 60% 2px, auto; }
+        .homeblockproducts__top .homeblockproducts__title:hover {
+          background-size: 100% 2px, auto; } }
 
 .homeblockproducts {
   justify-content: space-between;
@@ -1489,19 +1533,18 @@ a:visited, a:link {
     font-size: 2.5rem;
     color: rgba(248, 232, 5, 0.95); }
   .homeblockcontact__boton .homeblockcontact__boton__text {
-    font-family: "Oswald", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 1.5rem;
     display: inline;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     color: rgba(248, 232, 5, 0.95);
     font-weight: 600; }
-
-.homeblockcontact__boton:hover {
-  border: 1px solid #f8e805;
-  box-shadow: 0px 0px 20px white; }
-  .homeblockcontact__boton:hover .homeblockcontact__boton__icon, .homeblockcontact__boton:hover .homeblockcontact__boton__text {
-    color: white; }
+  .homeblockcontact__boton:hover {
+    border: 1px solid #f8e805;
+    box-shadow: 0px 0px 20px white; }
+    .homeblockcontact__boton:hover .homeblockcontact__boton__icon, .homeblockcontact__boton:hover .homeblockcontact__boton__text {
+      color: white; }
 
 @media screen and (max-width: 576px) {
   .homeblockcontact__boton {
@@ -1517,7 +1560,8 @@ a:visited, a:link {
     .homeblockcontact__boton .homeblockcontact__boton__text {
       font-size: 1.2rem;
       font-weight: 600;
-      color: white; } }
+      color: white;
+      letter-spacing: 0.1rem; } }
 
 /*FOOTER*/
 footer {

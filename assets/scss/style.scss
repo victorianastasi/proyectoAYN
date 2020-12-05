@@ -32,6 +32,7 @@ a:visited, a:link{
     font-weight: inherit;
 }
 .headerConImg{
+    background-color: $dark41;
     background-image: url(../../img/luces.jpg);
     background-size: cover;
     backface-visibility: hidden;
@@ -255,7 +256,7 @@ a:visited, a:link{
         color: white;
         margin: 0rem;
         padding: 0rem;
-        text-shadow: 5px 5px 5px $grey-dark;
+        text-shadow: 5px 5px 5px $darkgrey;
     }
 }
 @media screen and (max-width: 992px){
@@ -306,8 +307,9 @@ a:visited, a:link{
     justify-content: center;
     .homeblockus__top{
         padding: 0rem;
+        text-align: center;
         .homeblockus__title{
-            @include block-titles ();
+            @include block-title-underline-white();
         }
         .homeblockus__subtitle{
             @include block-subtitles();
@@ -389,7 +391,7 @@ a:visited, a:link{
         margin: 2rem 0rem;
         .homeblockus__top{
             .homeblockus__subtitle{
-                padding: 0rem;
+                padding: 0rem 0.25rem;
             }
         }
     }
@@ -471,8 +473,9 @@ a:visited, a:link{
 /*BLOQUE PRODUCTOS*/
 .homeblockproducts__top{
     padding: 0rem;
+    text-align: center;
     .homeblockproducts__title{
-        @include block-titles ();
+        @include block-title-underline-white();
     }
 }
 .homeblockproducts{
@@ -539,23 +542,22 @@ a:visited, a:link{
         color: rgba($yellow, 0.95);
     }
     .homeblockcontact__boton__text{
-        @include format-text ($font-family-primary, map-get($map: $font-sizes, $key: x-large));
+        @include format-text ($font-family-secondary, map-get($map: $font-sizes, $key: x-large));
         display: inline;
         text-transform: uppercase;
         letter-spacing: map-get($map: $letter-spacings, $key: medium);
         color: rgba($yellow, 0.95);
         font-weight: 600;
     }
-}
-.homeblockcontact__boton:hover{
-    border: 1px solid $yellow;
-    box-shadow: 0px 0px 20px white;
-    
-    .homeblockcontact__boton__icon, .homeblockcontact__boton__text{
-        color: white;
+    &:hover{
+        border: 1px solid $yellow;
+        box-shadow: 0px 0px 20px white;
+        
+        .homeblockcontact__boton__icon, .homeblockcontact__boton__text{
+            color: white;
+        }
     }
 }
-
 @media screen and (max-width: 576px){
     .homeblockcontact__boton{
         padding: 1rem 0rem;
@@ -572,6 +574,7 @@ a:visited, a:link{
             font-size: map-get($map: $font-sizes, $key: large);
             font-weight: 600;
             color: white;
+            letter-spacing: map-get($map: $letter-spacings, $key: x-small);
         }
     }
 }
