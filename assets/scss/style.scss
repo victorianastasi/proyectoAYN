@@ -320,8 +320,10 @@ a:visited, a:link{
 }
 .homeblockus-bottom{
     margin-bottom: 1.5rem;
+    width: 100%;
     .homeblockus__card{
         padding: 1rem 0.5rem;
+        border-color: none;
         .homeblockus__card__img{
             margin: 1rem 0rem;
             display: flex;

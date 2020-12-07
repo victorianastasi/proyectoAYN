@@ -1332,9 +1332,11 @@ a:visited, a:link {
           letter-spacing: 0px; } }
 
 .homeblockus-bottom {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  width: 100%; }
   .homeblockus-bottom .homeblockus__card {
-    padding: 1rem 0.5rem; }
+    padding: 1rem 0.5rem;
+    border-color: none; }
     .homeblockus-bottom .homeblockus__card .homeblockus__card__img {
       margin: 1rem 0rem;
       display: flex;
