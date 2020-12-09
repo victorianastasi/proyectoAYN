@@ -1,5 +1,4 @@
 /*productos.html*/
-
 /*TITULO E IMAGEN PRINCIPAL*/
 .products__title{
     @include principal-title();
@@ -65,7 +64,6 @@
         }
     }
 }
-
 @media screen and (max-width: 992px){
     .products__carousel{
         margin: 0rem 0rem;

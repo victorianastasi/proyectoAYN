@@ -1,6 +1,6 @@
+@charset "UTF-8";
 /*VARIABLES, MIXINS, MAPS*/
 /*COLORS*/
-/*background-color*/
 /*font-family*/
 /*maps*/
 /*ANIMACIONES*/
@@ -54,7 +54,7 @@
   100% {
     opacity: 1; } }
 
-/*mixins*/
+/*MIXINS*/
 /*titulos de secciones de la web*/
 /*nosotros.html*/
 /*CUADRO PRINCIPAL*/
@@ -533,6 +533,7 @@
       width: 100%; } }
 
 /*novedades.html*/
+/*SECCION DE NOVEDADES*/
 .news__title {
   color: white;
   font-weight: 800;
@@ -766,7 +767,7 @@
             transition: all 0.2s; }
         @media screen and (max-width: 576px) {
           .contact__info .contact__info__text .contact__info__text__blockicons .contact__info__text__blockicons__icon li {
-            margin: 0rem 1rem; }
+            margin: 0rem 0.9rem; }
             .contact__info .contact__info__text .contact__info__text__blockicons .contact__info__text__blockicons__icon li a {
               width: 45px;
               height: 45px; }
@@ -808,7 +809,7 @@
       width: 100%;
       height: 150px; } }
 
-/*Imagen en contacto*/
+/*Animación - ENVELOPE*/
 .contact-draw {
   display: flex;
   align-items: center;
@@ -1032,7 +1033,7 @@
           width: 200px;
           transition: all 0.2s; } }
 
-/*index.html*/
+/*GENERALIDADES EN TODOS .html*/
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -1071,57 +1072,7 @@ a:visited, a:link {
   animation-name: fadeInLeft;
   animation-duration: 1s; }
 
-/*Navbar INFO (TELEFONO, MAIL, Y CONTACTO)*/
-.navinfo {
-  background-color: rgba(10, 10, 10, 0.85);
-  padding: 0.5rem 0rem;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0rem;
-  border-bottom: 1px solid #f8e805; }
-  .navinfo .navinfo__items {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 0rem 0.75rem; }
-    .navinfo .navinfo__items .navinfo__items__text {
-      font-family: "Ubuntu", sans-serif;
-      color: #ecf0f1;
-      font-size: 0.9rem;
-      font-weight: 500;
-      word-spacing: 10px;
-      margin: 0rem;
-      padding: 0.25rem 0; }
-  .navinfo .navinfo__items:hover {
-    background-color: #ecf0f1;
-    box-shadow: 0px 0px 10px white;
-    border-radius: 5px; }
-    .navinfo .navinfo__items:hover .navinfo__items__text {
-      color: #0a0a0a; }
-
-@media screen and (max-width: 992px) {
-  .navinfo {
-    z-index: -1; }
-    .navinfo .navinfo__items .navinfo__items__text {
-      font-size: 0.8rem; } }
-
-@media screen and (max-width: 768px) {
-  .navinfo {
-    padding: 0.25rem 0rem; } }
-
-@media screen and (max-width: 576px) {
-  .navinfo .navinfo__items .navinfo__items__text {
-    font-size: 0.8rem;
-    padding: 0rem 0; }
-  .navinfo .navinfo__items:hover {
-    border-radius: 2px; }
-  .navinfo .navinfo__items:active {
-    background-color: #ecf0f1;
-    border-radius: 2px; }
-    .navinfo .navinfo__items:active .navinfo__items__text {
-      color: #0a0a0a; } }
-
-/*Navbar MENU*/
+/*MENU PRINCIPAL*/
 .navmenu {
   background-color: rgba(10, 10, 10, 0.6);
   height: 100px;
@@ -1209,361 +1160,55 @@ a:visited, a:link {
       width: 150px;
       margin-left: 0rem; } }
 
-/*VIDEO -HOME*/
-.video {
-  position: relative;
-  background-color: black; }
-  .video .home-video {
-    margin: -4rem auto 0rem auto;
-    width: 100%;
-    height: inherit; }
-  .video .home-video-box {
-    position: absolute;
-    top: 25%;
-    left: 10%; }
-  .video .home-video-title {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 4rem;
-    font-weight: 600;
-    color: white;
-    margin: 0rem;
-    padding: 0rem;
-    text-shadow: 5px 5px 5px #191919; }
-
-@media screen and (max-width: 992px) {
-  .video .home-video {
-    margin: -3rem auto 0rem auto; }
-  .video .home-video-title {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 3rem; } }
-
-@media screen and (max-width: 768px) {
-  .video .home-video {
-    margin: -2rem auto 0rem auto; }
-  .video .home-video-title {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 2.5rem; } }
-
-@media screen and (max-width: 576px) {
-  .video .home-video {
-    margin: 0rem auto 0rem auto;
-    height: 65vh;
-    min-width: 100%;
-    object-fit: cover; }
-  .video .home-video-box {
-    position: absolute;
-    top: 35%;
-    left: 10%; }
-  .video .home-video-title {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1.75rem; } }
-
-/*BLOQUE NOSOTROS*/
-.homeblock {
-  border: 2px solid rgba(236, 240, 241, 0.8);
-  border-radius: 5px;
-  padding: 0rem;
-  margin: 3rem 0rem;
-  justify-content: center; }
-  .homeblock .homeblockus__top {
-    padding: 0rem;
-    text-align: center; }
-    .homeblock .homeblockus__top .homeblockus__title {
-      justify-content: center;
-      padding: 1rem 0rem;
-      margin: 1rem 0rem;
-      text-shadow: 2px 2px 4px black;
-      display: inline-block;
-      font-family: "Ubuntu", sans-serif;
-      font-size: 2rem;
-      color: white;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.3rem;
-      background-image: linear-gradient(#f8e805, #f8d505);
-      background-size: 70% 2px, auto;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      transition: all .2s ease-out;
-      background-image: linear-gradient(white, #ecf0f1);
-      background-size: 60% 2.5px, auto; }
-      .homeblock .homeblockus__top .homeblockus__title:hover {
-        background-size: 100% 2px, auto; }
-      @media screen and (max-width: 992px) {
-        .homeblock .homeblockus__top .homeblockus__title {
-          padding: 0.75rem 0rem;
-          margin: 0.75rem 0rem;
-          font-family: "Ubuntu", sans-serif;
-          font-size: 1.5rem;
-          letter-spacing: 0.3rem; } }
-      @media screen and (max-width: 576px) {
-        .homeblock .homeblockus__top .homeblockus__title {
-          padding: 0.5rem 0rem;
-          margin: 0.5rem 0rem;
-          font-family: "Ubuntu", sans-serif;
-          font-size: 1.4rem;
-          letter-spacing: 0.2rem; } }
-      .homeblock .homeblockus__top .homeblockus__title:hover {
-        background-size: 100% 2.5px, auto; }
-      @media screen and (max-width: 992px) {
-        .homeblock .homeblockus__top .homeblockus__title {
-          background-size: 60% 2px, auto; }
-          .homeblock .homeblockus__top .homeblockus__title:hover {
-            background-size: 100% 2px, auto; } }
-    .homeblock .homeblockus__top .homeblockus__subtitle {
-      font-family: "Ubuntu", sans-serif;
-      font-size: 1.5rem;
-      text-shadow: 2px 2px 4px #757474;
-      font-weight: 400;
-      color: white;
-      letter-spacing: 0.2rem;
-      margin: 0.5rem 0rem 0rem 0rem;
-      padding: 0rem 10rem;
-      font-variant: small-caps; }
-      @media screen and (max-width: 992px) {
-        .homeblock .homeblockus__top .homeblockus__subtitle {
-          font-family: "Ubuntu", sans-serif;
-          font-size: 1.3rem;
-          letter-spacing: 0.1rem; } }
-      @media screen and (max-width: 576px) {
-        .homeblock .homeblockus__top .homeblockus__subtitle {
-          font-family: "Ubuntu", sans-serif;
-          font-size: 1.1rem;
-          letter-spacing: 0px; } }
-
-.homeblockus-bottom {
-  margin-bottom: 1.5rem;
-  width: 100%; }
-  .homeblockus-bottom .homeblockus__card {
-    padding: 1rem 0.5rem;
-    border-color: none; }
-    .homeblockus-bottom .homeblockus__card .homeblockus__card__img {
-      margin: 1rem 0rem;
-      display: flex;
-      justify-content: center; }
-      .homeblockus-bottom .homeblockus__card .homeblockus__card__img .homeblockus__card__img__icon {
-        font-size: 4rem;
-        color: #f8e805; }
-    .homeblockus-bottom .homeblockus__card .homeblockus__card__body {
-      padding-top: 0.5rem;
-      padding-bottom: 0rem; }
-      .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__title {
-        text-transform: uppercase;
-        margin: 0px;
-        font-weight: 800;
-        font-size: 1.2rem;
-        letter-spacing: 0.2rem; }
-      .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__text {
-        font-size: 1rem;
-        color: white;
-        letter-spacing: 0.1rem; }
-
-@media screen and (min-width: 1200px) {
-  .homeblockus-bottom .homeblockus__card {
-    padding: 1.5rem 0.5rem; } }
-
-@media screen and (max-width: 992px) {
-  .homeblock .homeblockus__top .homeblockus__subtitle {
-    padding: 0rem 4rem; }
-  .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__title {
-    font-size: 1rem; }
-  .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__text {
-    font-size: 0.9rem; } }
-
-@media screen and (max-width: 768px) {
-  .homeblock .homeblockus__top .homeblockus__subtitle {
-    padding: 0rem 2rem; } }
-
-@media screen and (max-width: 576px) {
-  .homeblock {
-    margin: 2rem 0rem; }
-    .homeblock .homeblockus__top .homeblockus__subtitle {
-      padding: 0rem 0.25rem; }
-  .homeblockus-bottom {
-    margin-bottom: 0rem; }
-    .homeblockus-bottom .homeblockus__card {
-      padding: 0.5rem 0.5rem; }
-      .homeblockus-bottom .homeblockus__card .homeblockus__card__img {
-        margin: 0.5rem 0rem; }
-        .homeblockus-bottom .homeblockus__card .homeblockus__card__img .homeblockus__card__img__icon {
-          font-size: 3rem; }
-      .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__title {
-        font-size: 0.9rem; }
-      .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__text {
-        letter-spacing: 0px;
-        font-size: 0.8rem; } }
-
-.homeblock__boton {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: -40px; }
-  .homeblock__boton .boton {
-    border: none;
-    border-radius: 20px;
-    background-color: #ecf0f1;
-    font-family: "Oswald", sans-serif;
-    min-width: 150px;
-    height: 50px;
-    padding: 0rem 30px;
-    margin: 1rem 0rem;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center; }
-    .homeblock__boton .boton .boton__text, .homeblock__boton .boton .boton__icon {
-      color: #0a0a0a; }
-  .homeblock__boton .boton:hover {
-    box-shadow: 0px 0px 10px white;
-    background-color: white;
-    animation-name: pulse;
-    animation-duration: 1s; }
-
-@media screen and (max-width: 576px) {
-  .homeblock__boton {
-    justify-content: center;
-    margin: 0rem;
-    position: unset; }
-    .homeblock__boton .boton {
-      border-radius: 15px;
-      min-width: 130px;
-      height: 40px;
-      padding: 0rem 15px;
-      justify-content: space-evenly; }
-      .homeblock__boton .boton .boton__text, .homeblock__boton .boton .boton__icon {
-        color: #0a0a0a;
-        font-size: 0.9rem; }
-    .homeblock__boton .boton:active {
-      box-shadow: 0px 0px 10px white;
-      background-color: white;
-      animation-name: pulse;
-      animation-duration: 1s; } }
-
-/*BLOQUE PRODUCTOS*/
-.homeblockproducts__top {
-  padding: 0rem;
-  text-align: center; }
-  .homeblockproducts__top .homeblockproducts__title {
-    justify-content: center;
-    padding: 1rem 0rem;
-    margin: 1rem 0rem;
-    text-shadow: 2px 2px 4px black;
-    display: inline-block;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 2rem;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    background-image: linear-gradient(#f8e805, #f8d505);
-    background-size: 70% 2px, auto;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    transition: all .2s ease-out;
-    background-image: linear-gradient(white, #ecf0f1);
-    background-size: 60% 2.5px, auto; }
-    .homeblockproducts__top .homeblockproducts__title:hover {
-      background-size: 100% 2px, auto; }
-    @media screen and (max-width: 992px) {
-      .homeblockproducts__top .homeblockproducts__title {
-        padding: 0.75rem 0rem;
-        margin: 0.75rem 0rem;
-        font-family: "Ubuntu", sans-serif;
-        font-size: 1.5rem;
-        letter-spacing: 0.3rem; } }
-    @media screen and (max-width: 576px) {
-      .homeblockproducts__top .homeblockproducts__title {
-        padding: 0.5rem 0rem;
-        margin: 0.5rem 0rem;
-        font-family: "Ubuntu", sans-serif;
-        font-size: 1.4rem;
-        letter-spacing: 0.2rem; } }
-    .homeblockproducts__top .homeblockproducts__title:hover {
-      background-size: 100% 2.5px, auto; }
-    @media screen and (max-width: 992px) {
-      .homeblockproducts__top .homeblockproducts__title {
-        background-size: 60% 2px, auto; }
-        .homeblockproducts__top .homeblockproducts__title:hover {
-          background-size: 100% 2px, auto; } }
-
-.homeblockproducts {
-  justify-content: space-between;
+/*SUBMENU CON INFORMACION DE TELEFONO, MAIL, Y CONTACTO*/
+.navinfo {
+  background-color: rgba(10, 10, 10, 0.85);
+  padding: 0.5rem 0rem;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 2.5rem; }
-  .homeblockproducts .homeblockproducts__img {
+  margin: 0rem;
+  border-bottom: 1px solid #f8e805; }
+  .navinfo .navinfo__items {
     display: flex;
     justify-content: center;
-    padding: 1rem; }
-  .homeblockproducts .homeblockproducts__box .homeblockproducts__box__text {
-    font-size: 1rem;
-    padding: 1rem 1.5rem;
-    color: white;
-    letter-spacing: 0.1rem; }
+    align-content: center;
+    padding: 0rem 0.75rem; }
+    .navinfo .navinfo__items .navinfo__items__text {
+      font-family: "Ubuntu", sans-serif;
+      color: #ecf0f1;
+      font-size: 0.9rem;
+      font-weight: 500;
+      word-spacing: 10px;
+      margin: 0rem;
+      padding: 0.25rem 0; }
+  .navinfo .navinfo__items:hover {
+    background-color: #ecf0f1;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 5px; }
+    .navinfo .navinfo__items:hover .navinfo__items__text {
+      color: #0a0a0a; }
 
 @media screen and (max-width: 992px) {
-  .homeblockproducts {
-    padding: 1rem 0rem 2rem 0rem; }
-    .homeblockproducts .homeblockproducts__box .homeblockproducts__box__text {
-      font-size: 0.9rem;
-      padding: 0.5rem 0rem;
-      margin: 0px; } }
+  .navinfo {
+    z-index: -1; }
+    .navinfo .navinfo__items .navinfo__items__text {
+      font-size: 0.8rem; } }
+
+@media screen and (max-width: 768px) {
+  .navinfo {
+    padding: 0.25rem 0rem; } }
 
 @media screen and (max-width: 576px) {
-  .homeblockproducts {
-    padding-top: 1rem;
-    padding-bottom: 0rem; }
-    .homeblockproducts .homeblockproducts__img {
-      padding: 0rem; }
-    .homeblockproducts .homeblockproducts__box {
-      margin-top: 1rem; }
-      .homeblockproducts .homeblockproducts__box .homeblockproducts__box__text {
-        letter-spacing: 0px;
-        font-size: 0.8rem; } }
-
-/*BLOQUE CONTACTO*/
-.homeblockcontact {
-  justify-content: center;
-  align-items: center;
-  margin: 3rem 0rem; }
-
-.homeblockcontact__boton {
-  padding: 1.5rem 0rem;
-  border: 1px solid #ecf0f1;
-  border-radius: 10px;
-  text-align: center; }
-  .homeblockcontact__boton .homeblockcontact__boton__icon {
-    margin: 0rem 1rem;
-    font-size: 2.5rem;
-    color: rgba(248, 232, 5, 0.95); }
-  .homeblockcontact__boton .homeblockcontact__boton__text {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1.5rem;
-    display: inline;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    color: rgba(248, 232, 5, 0.95);
-    font-weight: 600; }
-  .homeblockcontact__boton:hover {
-    border: 1px solid #f8e805;
-    box-shadow: 0px 0px 20px white; }
-    .homeblockcontact__boton:hover .homeblockcontact__boton__icon, .homeblockcontact__boton:hover .homeblockcontact__boton__text {
-      color: white; }
-
-@media screen and (max-width: 576px) {
-  .homeblockcontact__boton {
-    padding: 1rem 0rem;
-    margin: 1rem 0rem;
-    animation-name: boton-contacto-animation;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite; }
-    .homeblockcontact__boton .homeblockcontact__boton__icon {
-      font-size: 1.75rem;
-      color: white; }
-    .homeblockcontact__boton .homeblockcontact__boton__text {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: white;
-      letter-spacing: 0.1rem; } }
+  .navinfo .navinfo__items .navinfo__items__text {
+    font-size: 0.8rem;
+    padding: 0rem 0; }
+  .navinfo .navinfo__items:hover {
+    border-radius: 2px; }
+  .navinfo .navinfo__items:active {
+    background-color: #ecf0f1;
+    border-radius: 2px; }
+    .navinfo .navinfo__items:active .navinfo__items__text {
+      color: #0a0a0a; } }
 
 /*FOOTER*/
 footer {
@@ -1635,7 +1280,7 @@ footer {
           transition: all 0.2s; }
       @media screen and (max-width: 576px) {
         footer .footerblock .footerblock__info .footerblock__info__icons .social-circle li {
-          margin: 0rem 1rem; }
+          margin: 0rem 0.9rem; }
           footer .footerblock .footerblock__info .footerblock__info__icons .social-circle li a {
             width: 45px;
             height: 45px; }
@@ -1653,6 +1298,7 @@ footer {
         padding: 0rem;
         margin: 0rem; }
         footer .footerblock .footerblock__info .footerblock__info__contact a h3 {
+          text-align: center;
           margin: 0rem;
           font-size: 1.2rem;
           padding: 1rem 1.5rem;
@@ -1742,7 +1388,7 @@ footer {
           transition: all 0.2s; } }
     @media screen and (max-width: 992px) and (max-width: 576px) {
       footer .footerblock .footerblock__info .footerblock__info__icons .social-circle li {
-        margin: 0rem 1rem; }
+        margin: 0rem 0.9rem; }
         footer .footerblock .footerblock__info .footerblock__info__icons .social-circle li a {
           width: 45px;
           height: 45px; }
@@ -1777,3 +1423,359 @@ footer {
     padding-right: 15px; }
   footer .footerblock .copyright .copyright__text {
     font-size: 0.6rem; } }
+
+/*index.html*/
+/*VIDEO-HOME*/
+.video {
+  position: relative;
+  background-color: black; }
+  .video .home-video {
+    margin: -4rem auto 0rem auto;
+    width: 100%;
+    height: inherit; }
+  .video .home-video-box {
+    position: absolute;
+    top: 25%;
+    left: 10%; }
+  .video .home-video-title {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: white;
+    margin: 0rem;
+    padding: 0rem;
+    text-shadow: 5px 5px 5px #191919; }
+
+@media screen and (max-width: 992px) {
+  .video .home-video {
+    margin: -3rem auto 0rem auto; }
+  .video .home-video-title {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 3rem; } }
+
+@media screen and (max-width: 768px) {
+  .video .home-video {
+    margin: -2rem auto 0rem auto; }
+  .video .home-video-title {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2.5rem; } }
+
+@media screen and (max-width: 576px) {
+  .video .home-video {
+    margin: 0rem auto 0rem auto;
+    height: 65vh;
+    min-width: 100%;
+    object-fit: cover; }
+  .video .home-video-box {
+    position: absolute;
+    top: 35%;
+    left: 10%; }
+  .video .home-video-title {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.75rem; } }
+
+/*BLOQUE DE 'NOSOTROS'*/
+.homeblock {
+  border: 2px solid rgba(236, 240, 241, 0.8);
+  border-radius: 5px;
+  padding: 0rem;
+  margin: 3rem 0rem;
+  justify-content: center; }
+  .homeblock .homeblockus__top {
+    padding: 0rem;
+    text-align: center; }
+    .homeblock .homeblockus__top .homeblockus__title {
+      justify-content: center;
+      padding: 1rem 0rem;
+      margin: 1rem 0rem;
+      text-shadow: 2px 2px 4px black;
+      display: inline-block;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 2rem;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      background-image: linear-gradient(#f8e805, #f8d505);
+      background-size: 70% 2px, auto;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      transition: all .2s ease-out;
+      background-image: linear-gradient(white, #ecf0f1);
+      background-size: 60% 2.5px, auto;
+      transition: all 0.3s; }
+      .homeblock .homeblockus__top .homeblockus__title:hover {
+        background-size: 100% 2px, auto; }
+      @media screen and (max-width: 992px) {
+        .homeblock .homeblockus__top .homeblockus__title {
+          padding: 0.75rem 0rem;
+          margin: 0.75rem 0rem;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 1.5rem;
+          letter-spacing: 0.3rem; } }
+      @media screen and (max-width: 576px) {
+        .homeblock .homeblockus__top .homeblockus__title {
+          padding: 0.5rem 0rem;
+          margin: 0.5rem 0rem;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 1.4rem;
+          letter-spacing: 0.2rem; } }
+      .homeblock .homeblockus__top .homeblockus__title:hover {
+        background-size: 100% 2.5px, auto;
+        text-shadow: 0px 0px 8px #757474; }
+      @media screen and (max-width: 992px) {
+        .homeblock .homeblockus__top .homeblockus__title {
+          background-size: 60% 2px, auto; }
+          .homeblock .homeblockus__top .homeblockus__title:hover {
+            background-size: 100% 2px, auto; } }
+    .homeblock .homeblockus__top .homeblockus__subtitle {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 4px #757474;
+      font-weight: 400;
+      color: white;
+      letter-spacing: 0.2rem;
+      margin: 0.5rem 0rem 0rem 0rem;
+      padding: 0rem 10rem;
+      font-variant: small-caps; }
+      @media screen and (max-width: 992px) {
+        .homeblock .homeblockus__top .homeblockus__subtitle {
+          font-family: "Ubuntu", sans-serif;
+          font-size: 1.3rem;
+          letter-spacing: 0.1rem; } }
+      @media screen and (max-width: 576px) {
+        .homeblock .homeblockus__top .homeblockus__subtitle {
+          font-family: "Ubuntu", sans-serif;
+          font-size: 1.1rem;
+          letter-spacing: 0px; } }
+  .homeblock .homeblockus-bottom {
+    margin-bottom: 1.5rem;
+    width: 100%; }
+    .homeblock .homeblockus-bottom .homeblockus__card {
+      padding: 1rem 0.5rem;
+      border-color: none; }
+      .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__img {
+        margin: 1rem 0rem;
+        display: flex;
+        justify-content: center; }
+        .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__img .homeblockus__card__img__icon {
+          font-size: 4rem;
+          color: #f8e805; }
+      .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__body {
+        padding-top: 0.5rem;
+        padding-bottom: 0rem; }
+        .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__title {
+          text-transform: uppercase;
+          margin: 0px;
+          font-weight: 800;
+          font-size: 1.2rem;
+          letter-spacing: 0.2rem; }
+        .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__text {
+          font-size: 1rem;
+          color: white;
+          letter-spacing: 0.1rem; }
+  .homeblock .homeblock__boton {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: -40px; }
+    .homeblock .homeblock__boton .boton {
+      border: none;
+      border-radius: 20px;
+      background-color: #ecf0f1;
+      font-family: "Oswald", sans-serif;
+      min-width: 150px;
+      height: 50px;
+      padding: 0rem 30px;
+      margin: 1rem 0rem;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center; }
+      .homeblock .homeblock__boton .boton .boton__text, .homeblock .homeblock__boton .boton .boton__icon {
+        color: #0a0a0a; }
+    .homeblock .homeblock__boton .boton:hover {
+      box-shadow: 0px 0px 10px white;
+      background-color: white;
+      animation-name: pulse;
+      animation-duration: 1s; }
+
+@media screen and (min-width: 1200px) {
+  .homeblock .homeblockus-bottom .homeblockus__card {
+    padding: 1.5rem 0.5rem; } }
+
+@media screen and (max-width: 992px) {
+  .homeblock .homeblockus__top .homeblockus__subtitle {
+    padding: 0rem 4rem; }
+  .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__title {
+    font-size: 1rem; }
+  .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__text {
+    font-size: 0.9rem; } }
+
+@media screen and (max-width: 768px) {
+  .homeblock .homeblockus__top .homeblockus__subtitle {
+    padding: 0rem 2rem; } }
+
+@media screen and (max-width: 576px) {
+  .homeblock {
+    margin: 2rem 0rem; }
+    .homeblock .homeblockus__top .homeblockus__subtitle {
+      padding: 0rem 0.25rem; }
+    .homeblock .homeblockus-bottom {
+      margin-bottom: 0rem; }
+      .homeblock .homeblockus-bottom .homeblockus__card {
+        padding: 0.5rem 0.5rem; }
+        .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__img {
+          margin: 0.5rem 0rem; }
+          .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__img .homeblockus__card__img__icon {
+            font-size: 3rem; }
+        .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__title {
+          font-size: 0.9rem; }
+        .homeblock .homeblockus-bottom .homeblockus__card .homeblockus__card__body .homeblockus__card__body__text {
+          letter-spacing: 0px;
+          font-size: 0.8rem; }
+    .homeblock .homeblock__boton {
+      justify-content: center;
+      margin: 0rem;
+      position: unset; }
+      .homeblock .homeblock__boton .boton {
+        border-radius: 15px;
+        min-width: 130px;
+        height: 40px;
+        padding: 0rem 15px;
+        justify-content: space-evenly; }
+        .homeblock .homeblock__boton .boton .boton__text, .homeblock .homeblock__boton .boton .boton__icon {
+          color: #0a0a0a;
+          font-size: 0.9rem; }
+      .homeblock .homeblock__boton .boton:active {
+        box-shadow: 0px 0px 10px white;
+        background-color: white;
+        animation-name: pulse;
+        animation-duration: 1s; } }
+
+/*BLOQUE DE 'PRODUCTOS'*/
+.homeblock .homeblockproducts__top {
+  padding: 0rem;
+  text-align: center; }
+  .homeblock .homeblockproducts__top .homeblockproducts__title {
+    justify-content: center;
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    background-image: linear-gradient(#f8e805, #f8d505);
+    background-size: 70% 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+    background-image: linear-gradient(white, #ecf0f1);
+    background-size: 60% 2.5px, auto;
+    transition: all 0.3s; }
+    .homeblock .homeblockproducts__top .homeblockproducts__title:hover {
+      background-size: 100% 2px, auto; }
+    @media screen and (max-width: 992px) {
+      .homeblock .homeblockproducts__top .homeblockproducts__title {
+        padding: 0.75rem 0rem;
+        margin: 0.75rem 0rem;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem; } }
+    @media screen and (max-width: 576px) {
+      .homeblock .homeblockproducts__top .homeblockproducts__title {
+        padding: 0.5rem 0rem;
+        margin: 0.5rem 0rem;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem; } }
+    .homeblock .homeblockproducts__top .homeblockproducts__title:hover {
+      background-size: 100% 2.5px, auto;
+      text-shadow: 0px 0px 8px #757474; }
+    @media screen and (max-width: 992px) {
+      .homeblock .homeblockproducts__top .homeblockproducts__title {
+        background-size: 60% 2px, auto; }
+        .homeblock .homeblockproducts__top .homeblockproducts__title:hover {
+          background-size: 100% 2px, auto; } }
+
+.homeblock .homeblockproducts {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem; }
+  .homeblock .homeblockproducts .homeblockproducts__img {
+    display: flex;
+    justify-content: center;
+    padding: 1rem; }
+  .homeblock .homeblockproducts .homeblockproducts__box .homeblockproducts__box__text {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    letter-spacing: 0.1rem; }
+
+@media screen and (max-width: 992px) {
+  .homeblock .homeblockproducts {
+    padding: 1rem 0rem 2rem 0rem; }
+    .homeblock .homeblockproducts .homeblockproducts__box .homeblockproducts__box__text {
+      font-size: 0.9rem;
+      padding: 0.5rem 0rem;
+      margin: 0px; } }
+
+@media screen and (max-width: 576px) {
+  .homeblock .homeblockproducts {
+    padding-top: 1rem;
+    padding-bottom: 0rem; }
+    .homeblock .homeblockproducts .homeblockproducts__img {
+      padding: 0rem; }
+    .homeblock .homeblockproducts .homeblockproducts__box {
+      margin-top: 1rem; }
+      .homeblock .homeblockproducts .homeblockproducts__box .homeblockproducts__box__text {
+        letter-spacing: 0px;
+        font-size: 0.8rem; } }
+
+/*BOTON DE CONTACTO*/
+.homeblockcontact {
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0rem; }
+  .homeblockcontact .homeblockcontact__boton {
+    padding: 1.5rem 0rem;
+    border: 1px solid #ecf0f1;
+    border-radius: 10px;
+    text-align: center; }
+    .homeblockcontact .homeblockcontact__boton .homeblockcontact__boton__icon {
+      margin: 0rem 1rem;
+      font-size: 2.5rem;
+      color: rgba(248, 232, 5, 0.95); }
+    .homeblockcontact .homeblockcontact__boton .homeblockcontact__boton__text {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1.5rem;
+      display: inline;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      color: rgba(248, 232, 5, 0.95);
+      font-weight: 600; }
+    .homeblockcontact .homeblockcontact__boton:hover {
+      border: 1px solid #f8e805;
+      box-shadow: 0px 0px 20px white; }
+      .homeblockcontact .homeblockcontact__boton:hover .homeblockcontact__boton__icon, .homeblockcontact .homeblockcontact__boton:hover .homeblockcontact__boton__text {
+        color: white; }
+
+@media screen and (max-width: 576px) {
+  .homeblockcontact .homeblockcontact__boton {
+    padding: 1rem 0rem;
+    margin: 1rem 0rem;
+    animation-name: boton-contacto-animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite; }
+    .homeblockcontact .homeblockcontact__boton .homeblockcontact__boton__icon {
+      font-size: 1.75rem;
+      color: white; }
+    .homeblockcontact .homeblockcontact__boton .homeblockcontact__boton__text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 0.1rem; } }

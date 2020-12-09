@@ -1,5 +1,5 @@
 /*novedades.html*/
-
+/*SECCION DE NOVEDADES*/
 .news__title{
     @include principal-title();
     @include margin-titles();
@@ -60,7 +60,6 @@
         }
     }
 }
-
 @media screen and (max-width: 992px){
     .news__animation__block{
         .news__block{
